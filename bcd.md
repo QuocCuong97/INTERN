@@ -1,2 +1,2 @@
 
-### *DEMO Level 2* ###
+### DEMO Level 2 ###
