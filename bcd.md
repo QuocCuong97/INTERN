@@ -11,4 +11,4 @@
 
 git
 > git......
-<img src=[Imgur](https://i.imgur.com/aC9coNo.png)>
+<img src=[Imgur](https://imgur.com/aC9coNo)>
