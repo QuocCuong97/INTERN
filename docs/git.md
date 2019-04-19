@@ -1,4 +1,6 @@
-# Git vs GitHub                                                                                   ![](/images/git/logomini.png)
+# **Git vs GitHub**                                                                                    
+<img src=../images/git/logomini.png>
+
 ## 1) Nguồn gốc
 - `Git` được phát triển bởi `Linus Torvalds` vào năm 2005. Hiện nay `Git` trở thành một trong các công cụ quản lý mã nguồn phổ biến nhất. `Git` được phân phối theo giấy phép công cộng GPL2.
 - Nền tảng `GitHub` bắt đầu vào ngày 19 tháng 10 năm 2007. Trang web được đưa ra vào tháng 4 năm 2008 do `Tom Preston-Werner`, `Chris Wanstrath`, và `PJ Hyett` thực hiện sau khi nó đã được hoàn thành 1 vài tháng trước đó.
