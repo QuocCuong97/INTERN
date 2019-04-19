@@ -10,6 +10,6 @@
 <img src=../images/vmware/6.jpg>
 <img src=../images/vmware/7.jpg>
 <img src=../images/vmware/8.jpg>
- Nhập Licence Key` FC51U-43Z0L-H85TZ-NZQ5G-PZUW6 ` để kích hoạt bản Pro
- 
+ Nhập Licence Key `"FC51U-43Z0L-H85TZ-NZQ5G-PZUW6"` để kích hoạt bản Pro
+
  ## 2) Phân biệt các loại card mạng trong VMware
