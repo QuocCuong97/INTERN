@@ -9,4 +9,4 @@
 
 ### 4) [Tìm hiểu và cài đặt CentOS 7 Minimal](https://github.com/QuocCuong97/demo/blob/master/docs/centos7.md)
 - [4.1. Giới thiệu CentOS 7](https://github.com/QuocCuong97/demo/blob/master/docs/centos7.md#1-gi%E1%BB%9Bi-thi%E1%BB%87u-centos-7)
-- [4.2. Hướng dẫn cài đặt CentOS 7 Minimal trên VMware Workstation 15](https://github.com/QuocCuong97/demo/blob/master/docs/centos7.md#2-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-centos-7-tr%C3%AAn-vmware-workstation-15]
+- [4.2. Hướng dẫn cài đặt CentOS 7 Minimal trên VMware Workstation 15](https://github.com/QuocCuong97/demo/blob/master/docs/centos7.md#2-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-centos-7-tr%C3%AAn-vmware-workstation-15)
