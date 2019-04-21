@@ -105,6 +105,7 @@
 <img src=../images/centos7/Screenshot_40.png>
 
 *Sau khi máy khởi động, nhập user: `root` và password của `root` đã tạo để đăng nhập vào giao diện dòng lệnh.*
-    <img src=../images/centos7/Screenshot_41.png>
-    <img src=../images/centos7/Screenshot_42.png>
+
+<img src=../images/centos7/Screenshot_41.png>
+<img src=../images/centos7/Screenshot_42.png>
 
