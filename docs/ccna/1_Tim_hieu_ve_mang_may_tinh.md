@@ -5,7 +5,7 @@
 - Tốc độ dữ liệu trên đường truyền còn được gọi là băng thông - thường được tính bằng số lượng bit được truyền đi trong 1 giây (bps).
 > ## 2) Ứng dụng - chức năng chia sẻ tài nguyên
 - Kết nối cho phép các thiết bị có thể chia sẻ dữ liệu, tài nguyên của cá nhân, tổ chức, các hoạt động chia sẻ thường thấy trong mạng doanh nghiệp:
-    - Chia sẻ data và các loại application: người dùn có thể chia sẻ chung một hay nhiều loại tài nguyên với nhau như chia sẻ file giữa các máy tính kết nối với nhau, điều khiển truy nhập như Teamviewer hoặc thực hiện các video conference giữa các chi nhánh của công ty.
+    - Chia sẻ data và các loại application: người dùng có thể chia sẻ chung một hay nhiều loại tài nguyên với nhau như chia sẻ file giữa các máy tính kết nối với nhau, điều khiển truy nhập như Teamviewer hoặc thực hiện các video conference giữa các chi nhánh của công ty.
     - Trao đổi tài nguyên hardware như máy in, máy photocopy,...
     - Share tài nguyên lưu trữ như: dữ liệu trong Server hay các hệ thống database, Data Center của các doanh nghiệp.
 > ## 3) Các đặc tính kỹ thuật trong 1 mô hình mạng máy tính
