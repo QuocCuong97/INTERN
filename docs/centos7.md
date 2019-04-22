@@ -1,6 +1,7 @@
 # **CentOS 7**
-## 1) Giới thiệu `CentOS 7`
-## 2) Hướng dẫn cài đặt `CentOS 7` trên `VMware Workstation 15`
+>## 1) Giới thiệu `CentOS 7`
+
+>## 2) Hướng dẫn cài đặt `CentOS 7` trên `VMware Workstation 15`
 - Download file ISO của `CentOS 7 Minimal` tại URL: http://mirror.ehost.vn/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-Minimal-1810.iso
 - Mở phần mềm VMware Workstation và tiến hành cài đặt máy ảo:
 

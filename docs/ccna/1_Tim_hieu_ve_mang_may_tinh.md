@@ -28,5 +28,31 @@
     - Logical Topology : mô tả cách thức luồng dữ liệu được truyền tải.
 - Các mô hình đấu nối cơ bản
 
-    <img src=../images/ccna/1_Tim_hieu_ve_mang_may_tinh/1.png>
+    - ### **Bus**
+
+    ![](/images/ccna/1_Tim_hieu_ve_mang_may_tinh/1.jpg)
+
+    - ### **Ring**
+
+    ![](/images/ccna/1_Tim_hieu_ve_mang_may_tinh/2.jpg)
+
+    - ### **Star**
+
+    ![](/images/ccna/1_Tim_hieu_ve_mang_may_tinh/3.jpg)
+
+- Các mô hình chia theo mật độ kết nối 
+
+   - ### **Full-mesh** : các thiết bị đều được kết nối đến các thiết bị còn lại. Tính dự phòng cao nhưng tốn chi phí đầu tư.
+
+    ![](/images/ccna/1_Tim_hieu_ve_mang_may_tinh/4.jpg)
+
+    - ### **Hub-and-Spoke** : kết nối thiết bị trung tâm đến các thiết bị còn lại. Sơ đồ này không có tính dự phòng, khi hub (spoke) chết thì các spke còn lại cô lập hoàn toàn, hệ thống mất tính dự phòng nhưng bù lại chi phí lắp đặt ít hơn Full-mesh.
+
+    ![](/images/ccna/1_Tim_hieu_ve_mang_may_tinh/5.jpg)
+
+    - ### **Partial-mesh** : sự kết hợp giữa 2 sơ đồ trên, vừa đảm bảo được tính dự phòng vừa ít tốn chi phí cho việc vận hành và bảo dưỡng. Các thiệt bị đều có 1 đường dự phòng.
+
+    ![](/images/ccna/1_Tim_hieu_ve_mang_may_tinh/6.jpg)
+
+
 
