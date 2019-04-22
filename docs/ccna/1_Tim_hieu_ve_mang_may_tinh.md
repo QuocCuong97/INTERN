@@ -27,3 +27,6 @@
     - Physical Topology : sơ đồ vật lý mô tả cách kết nối các thiết bị mạng.
     - Logical Topology : mô tả cách thức luồng dữ liệu được truyền tải.
 - Các mô hình đấu nối cơ bản
+
+    <img src=../images/ccna/1_Tim_hieu_ve_mang_may_tinh/1.png>
+
