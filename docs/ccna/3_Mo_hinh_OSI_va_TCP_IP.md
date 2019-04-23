@@ -22,7 +22,7 @@
 >## 2) **Mô hình TCP/IP**
 - Mô hình này cũng được sử dụng khá rộng rãi, độ phổ biến tương đương mô hình OSI.
 
-![](/images/ccna/3_Mo_hinh_OSI_va_TCP_IP/2.png)
+    ![](/images/ccna/3_Mo_hinh_OSI_va_TCP_IP/2.png)
 
 - Khác với OSI, TCP/IP tổ chức dữ liệu theo 4 tầng:
 
@@ -36,7 +36,7 @@
 
 - ### **Mô hình TCP/IP 5 Layers**
 
-![](/images/ccna/3_Mo_hinh_OSI_va_TCP_IP/3.jpg)
+    ![](/images/ccna/3_Mo_hinh_OSI_va_TCP_IP/3.jpg)
 
 > ## 3) **So sánh Mô hình OSI - TCP/IP**
 
