@@ -12,6 +12,10 @@
 
     **VD:** Có thể viết như sau : ```192.168.1.3 - 255.255.255.0```
                 hoặc sử dụng ***prefix-length*** : ```192.168.1.3 / 24```
+- Bảng `Subnet-mask`
+
+    ![](/images/ccna/6_Dia_chi_IP/0.png)
+    
 >## **3) Các lớp địa chỉ IP**
 ### **3.1) Lớp A**
 
