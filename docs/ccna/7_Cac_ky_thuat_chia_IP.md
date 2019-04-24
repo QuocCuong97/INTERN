@@ -116,5 +116,7 @@ Có 10.0 (16bit) là phần NetID và 0.0 (16bit) là phần HostID
             192.168.|000000|01.0
             192.168.|000000|10.0
             192.168.|000000|11.0
-- Ở octet thứ 3, các địa chỉ này còn giống nhau thêm được 6 bit nữa. Vậy địa chỉ network mà bao trùm 4 địa chỉ network trên sẽ có phần network bao gồm octet thứ 1, octet thứ 2 và thêm 6 bit giống nhau kia nữa. Cho các bit còn lại làm phần host và clear chúng về 0, ta sẽ có được địa chỉ summary cần tìm là 192.168.0.0/22
+- Ở octet thứ 3, các địa chỉ này còn giống nhau thêm được 6 bit nữa. 
+Vậy địa chỉ network mà bao trùm 4 địa chỉ network trên sẽ có phần network bao gồm octet thứ 1, octet thứ 2 và thêm 6 bit giống nhau kia nữa. 
+Cho các bit còn lại làm phần host và clear chúng về 0, ta sẽ có được địa chỉ summary cần tìm là 192.168.0.0/22
 ```
