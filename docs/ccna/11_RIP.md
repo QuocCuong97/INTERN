@@ -1,7 +1,7 @@
 # RIP - Routing Information Protocol ( R ) 
 ## **RIPv2**
 > ## **1) Đặc điểm**
-- Thuộc dạng Distance Vector
+- Thuộc dạng **Distance Vector**
 - Sử dụng port `520 UDP`
 - Giao thức **classless** ( `subnet-mask` đi kèm với `IP` )
 - Hỗ trợ **VLSM** và **CIDR**
