@@ -31,7 +31,7 @@
     ```
 - Hiển thị thông tin các cổng kết nối có trên Router :
     ```
-    Router # show ip int brief
+    Router # show ip interface brief
     ```
 - Kiểm tra kết nối từ Router đến IP 10.10.10.10
     ```

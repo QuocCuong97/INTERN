@@ -84,6 +84,50 @@ Router(config-router) # network [connected network] [wildcard mask] area [area-i
     - **Connected network** : dải mạng tham gia **OSPF**
     - **Wildcard-mask** : điều kiện để kiểm tra giữa địa chỉ cấu hình trong address và địa chỉ giữa các cổng trên Router
     - **Area-ID** : vùng mà cổng tương ứng thuộc về kiến trúc **OSPF**
+- Hiệu chỉnh **Router-ID** :
+    ```
+    Router(config-router) # router-id A.B.C.D
+    ```
+    Sau đó 
+    ```
+    Router # clear ip ospf process => Yes           ( khởi động lại quá trình OSPF )
+    ```
+- Hiệu chỉnh **Hello Timer** và **Dead Timer** :
+    ```
+    Router(config-if) # ip ospf | hello-interval | [seconds]
+                                |  dead-interval |
+    ```
+- Hiệu chỉnh `bandwidth` của cổng :
+    ```
+    Router(config-if) # bandwidth [number]        ( đơn vị là kbps )
+    ```
+- Hiệu chỉnh `cost` :
+    ```
+    Router(config-if) # ip ospf cost [value]
+    ```
+- Các lệnh kiểm tra cấu hình **OSPF**
+    ```
+    Router # show ip protocol
+    Router # show ip route
+    Router # show ip ospf interface
+    Router # show ip ospf neighbor
+    Router # debug ip ospf events
+    Router # debug ip ospf packet
+    ```
+- Chứng thực trong **OSPF**
+    - Dạng ***ClearText***
+    ```
+    Router(config) # interface f0/0
+    Router(config-if) # ip ospf authentication
+    Router(config-if) # ip ospf authentication-key [password]
+    ```
+    - Dạng ***MD5***
+    ```
+    Router(config) # interface f0/0
+    Router(config-if) # ip ospf authentication message-digest
+    Router(config-if) # ip ospf message-digest-key 1 md5 [password]
+    ```
+
 
 
 
