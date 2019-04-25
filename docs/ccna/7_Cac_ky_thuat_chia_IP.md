@@ -107,9 +107,9 @@ Có 10.0 (16bit) là phần NetID và 0.0 (16bit) là phần HostID
 - Nguyên lý : Để summary nhiều network , tiến hành quan sát các `octet` của các địa chỉ này từ trái sang phải và xét `octet` khác nhau đầu tiên . Thực hiện phân tích nhị phân các `octet` khác nhau đầu tiên này và tiếp tục chọn ra các bit nhị phân giống nhau trong các `octet` . Phần network của địa chỉ **summary** sẽ được tạo thành từ các `octet` giống nhau trước đó và các bit nhị phân giống nhau của `octet` vừa xét .
 - **VD :** *Hãy tóm tắt ( **summary** ) 4 địa chỉ mạng sau đây thành 1 địa chỉ mạng duy nhất*
     - `192.168.0.0/24`
-    - `192.168.0.1/24`
-    - `192.168.0.2/24`
-    - `192.168.0.3/24`
+    - `192.168.1.0/24`
+    - `192.168.2.0/24`
+    - `192.168.3.0/24`
 ```
 - Có thể thấy rằng 4 địa chỉ trên giống nhau các octet thứ 1 và thứ 2, khác nhau ở octet thứ 3 . Thực hiện phân tích nhị phân octet thứ 3 : 
             192.168.|000000|00.0
