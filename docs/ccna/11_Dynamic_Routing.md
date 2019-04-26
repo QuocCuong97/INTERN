@@ -50,5 +50,5 @@
     - **Dead-Timer** : `40s`
 - **EIGRP**
     - **Hello-Timer** : `5s`
-    - **Hold-Timer ( Dead-Timer )** `15s`
+    - **Hold-Timer ( Dead-Timer )** : `15s`
 
