@@ -60,6 +60,7 @@
     | **Trunk** | - | Trunk | Trunk | Trunk |
     | **Desirable** | Access | Trunk | Trunk | Trunk |
     | **Auto** | Access | Trunk | Trunk | Access |
+    
     **Desirable** và **Auto** là các mode **trunk** tự động trên cổng . Cổng ở mode **Desirable** sẽ chủ động tương tác với đầu kia để thiết lập **trunk** , còn cổng **Auto** sẽ thụ động chờ đợi .
     => Đây là giao thức **DTP - Dynamic Trunk Protocol** .
 - Tắt **DTP** trên cổng :
