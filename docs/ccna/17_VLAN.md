@@ -25,3 +25,65 @@
     Switch # show vlan
     ```
 > ## **2) Trunking**
+- Hai cổng trên 2 Switch ở đầu đường **trunk** gọi là các ***cổng*** **trunk** , ngược lại , những cổng thuộc về 1 **VLAN** nào đó , được sử dụng để kết nối đến các end-user gọi là ***cổng*** **access** .
+
+- Mấu chốt của kỹ thuật **trunking** là đánh dấu để phân biệt giữa các **frame** của **VLAN** khác nhau khi chúng đi trên đường **trunk** . Có 2 kỹ thuật chèn thêm thông tin vào Ethernet **frame** khi nó đi vào đường **trunk** để cho biết **frame** đó thuộc **VLAN** nào , đó là **IEEE 802.1Q** ( thường được gọi tắt là **dot1q** ) và **ISL** ( **Interswitch Link** ) . **Dot1q** là chuẩn quốc tế của **IEEE** , còn **ISL** là chuẩn riêng của Cisco , chỉ chạy trên các thiết bị Cisco .
+- **Kỹ thuật trunking dot1q** thực hiện chèn thêm `4 byte` thông tin trunking vào ngay sau trường **source MAC** của Ethernet **frame** khi nó đi vào trong đường **trunk** , thông tin chèn thêm vào gọi là **Dot1q Tag** . **Dot1q Tag** gồm 1 số trường như sau : 
+    - **Tag Protocol Identifier ( TFI )** , dài `16 bit` : nội dung của trường này được thiết lập là `0x8100` .
+
+    - **Class of Service ( CoS )** , dài `3 bit` : đây là `3 bit` được sử dụng cho kỹ thuật **QoS** trên Switch , việc sử dụng các bit này được tuân theo chuẩn classification ***IEEE 802.1p*** .
+    - **Canonical Format Indicator ( CFI )** , dài `1 bit` : là 1 chỉ báo cho biết các địa chỉ MAC được sử dụng ở định dạng Ethernet hay TokenRing . Bit này dùng cho trường hợp mạng nội bộ có giao tiếp với loại mạng LAN TokenRing
+    - **VLAN Identifier** , dài `12 bit` : trường này sẽ cho biết **frame** đang chạy trên đường **trunk** đến **VLAN** nào .
+- **Kỹ thuật trunking ISL**
+    - Nếu kỹ thuật trungking **dot1q** của **IEEE** chèn thêm `4 byte` thông tin trunking vào giữa Ethernet **frame** thì kỹ thuật trunking **ISL** của Cisco lại thực hiện đóng gói toàn bộ Ethernet **frame** giữa 1 header `26 byte` và 1 trường kiểm tra lỗi **CRC** dài `4 byte` .
+- **Native VLAN**
+    - **Frame** thuộc về **native VLAN** khi đi vào đường **trunk** sẽ không bị tag thêm thông tin trunking mà sẽ được để nguyên dạng Ethernet Frame như bình thường .
+
+    - **Native VLAN** được sử dụng để cho phép tương thích với các thiết bị cũ không có khả năng trunking .
+    - Để đảm bảo đường **trunk** hoạt động đúng đắn , 2 Switch hai đầu đường **trunk** phải cấu hình thống nhất với nhau về **native VLAN** được sử dụng trên đường **trunk** nối giữa chúng .
+    - Mặc định , **native VLAN** được sử dụng là **VLAN 1** .
+> ## **3) Cấu hình Trunking**
+- Chọn kỹ thuật **trunking** : **dot1q** hay **ISL** :
+    ```
+    Switch(config-if) # switchport trunk encapsulation [dot1q|ISL]
+    ```
+- Chọn mode **trunking** :
+    ```
+    Switch(config-if) # switchport mode [access|trunk|dynamic|desirable|dynamic auto]
+    ```
+
+    Bảng tương tác giữa các mode :
+
+    | | Access | Trunk | Desirable | Auto |
+    |-|--------|-------|-----------|------|
+    | **Access** | Access | - |  Access | Access |
+    | **Trunk** | - | Trunk | Trunk | Trunk |
+    | **Desirable** | Access | Trunk | Trunk | Trunk |
+    | **Auto** | Access | Trunk | Trunk | Access |
+    **Desirable** và **Auto** là các mode **trunk** tự động trên cổng . Cổng ở mode **Desirable** sẽ chủ động tương tác với đầu kia để thiết lập **trunk** , còn cổng **Auto** sẽ thụ động chờ đợi .
+    => Đây là giao thức **DTP - Dynamic Trunk Protocol** .
+- Tắt **DTP** trên cổng :
+    ```
+    Switch(config-if) # switchport mode trunk
+    Switch(config-if) # switchport nonegotiate
+    ```
+- Giới hạn **VLAN** đi qua **trunk** : 
+    ```
+    Switch(config-if) # switchport trunk allowed vlan [vlan-list|all|add/except/remove vlan-list]
+    ```
+    - Trong đó : 
+        - **vlan-list** : là 1 danh sách các **VLAN** trong danh sách được phân cách bởi dấu "`,`" hoặc dấu  "`-`"
+        - **all** : tất cả các **VLAN** từ `1` đến `4094` sẽ được phép đi qua đường **trunk** .
+        - **add vlan-list** : thêm 1 danh sách **VLAN** mới vào danh sách hiện có .
+        - **except vlan-list** : tất cả các **VLAN** đều được phép đi qua đường **trunk** này ngoại trừ các **VLAN** nằm trong list này .
+        - **remove vlan-list** : gỡ bỏ các **VLAN** trong **vlan-list** ra khỏi danh sách các **VLAN** hiện đang được đi qua đường **trunk** .
+- Hiệu chỉnh **Native VLAN** ( mặc định là **VLAN 1** ) : 
+    ```
+    Switch(config-if) # switchport trunk native vlan [vlan-id]
+    ```
+- Kiểm tra kết quả cấu hình :
+    ```
+    Switch # show interface [name] trunk
+    Switch # show interface switchport
+    Switch # show trunk
+    ```
