@@ -38,9 +38,9 @@
 - **VD :**
 ![]()
     - Gateway cho các PC thuộc **VLAN** :
-        - Interface VLAN1 : `192.168.10.1/24`
-        - Interface VLAN2 : `192.168.20.1/24`
-        - Interface VLAN3 : `192.168.30.1/24`
+        - Interface VLAN10 : `192.168.10.1/24`
+        - Interface VLAN20 : `192.168.20.1/24`
+        - Interface VLAN30 : `192.168.30.1/24`
     - Tạo và gắn port cho các **VLAN** :
         ```
         Switch(config) # vlan 10,20,30

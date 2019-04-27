@@ -94,13 +94,13 @@
     Router(config) # access-list [number] [deny|permit] icmp [source network|host] [des network|host]
     ```
 ### **4.2) Named ACL**
-    ```
+```
     Router(config) # ip access-list [standard|extended] [name]
     Router(config) # [permit|deny] . . .
 
     Router(config) # interface [name]
     Router(config-if) # ip access-group [name] [in|out]
-    ```
+```
 
 
 
