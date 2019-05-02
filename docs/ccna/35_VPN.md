@@ -68,7 +68,8 @@
         ![](/images/ccna/35_VPN/3.png)
 
 => Sau khi **tunnel** được thiết lập, sơ đồ đấu nối giữa R1 và R2 có thể được trình bày lại như sau :
-    ![](/images/ccna/35_VPN/4.png)
+
+![](/images/ccna/35_VPN/4.png)
 
 - Vì **GRE Tunnel** có hỗ trợ định tuyến, có thể cấu hình 1 hình thức định tuyến bất kỳ qua sơ đồ này để 2 mạng LAN của 2 chi nhánh có thể thấy nhau :
     ```
@@ -83,9 +84,11 @@
 => Mối quan hệ láng giềng **EIGRP** có thể được thiết lập qua `Tunnel 12` và định tuyến hội tụ :
 
 - Trên R1: 
-        ![](/images/ccna/35_VPN/11.png)
+
+    ![](/images/ccna/35_VPN/11.png)
 - Trên R2 :
-        ![](/images/ccna/35_VPN/12.png)
+
+    ![](/images/ccna/35_VPN/12.png)
 
 => 2 mạng **LAN** đã có thể đi đến nhau qua **tunnel** :
 
