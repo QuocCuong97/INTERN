@@ -74,6 +74,7 @@
 | Fast Ethernet | 100000 | 1 |
 | Gigabit Ethernet | 1000000 | 0.1 |
 | Serial | 1544 | 64 |
+| Loopback | 10000 | 10 |
 > ## **7) Cấu trúc lệnh OSPF**
 ```
 Router(config) # router ospf [process-id]
