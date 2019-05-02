@@ -59,7 +59,7 @@
 - Cisco khắc phục điều này bằng cách đưa ra kỹ thuật **pVST+** trên các dòng sản phẩm Switch Catalyst của mình .
 - Ý tưởng của kỹ thuật này là mỗi **VLAN** sẽ chạy 1 **STP** riêng 
 => Nếu hiệu chỉnh thích hợp , có thể thực hiện cân bằng tải giữa các **VLAN** , từ đó sử dụng đường truyền tối ưu hơn nhiều .
-- Với **pVST+**, **VLAN-ID** của các **VLAN** sẽ được nhúng vào trong các gói tin **BPDU** để phân biệt **BPDU** của các tiến trình **STP** của các **VLAN** khác nhau . Giá trị **VLAN-ID** dài `12 bit` sẽ được cài vào **priority** của **Bridge-ID** trên các **BPDU** . **Priority** dài `16bit` nên chỉ còn `4 bit` cho **priority**, `12 bit` còn lại cho **VLAN-ID** => **Priority** với **pVST+** luôn phải là bội số của `4096` ( = `2^12` )
+- Với **pVST+**, **VLAN-ID** của các **VLAN** sẽ được nhúng vào trong các gói tin **BPDU** để phân biệt **BPDU** của các tiến trình **STP** của các **VLAN** khác nhau . Giá trị **VLAN-ID** dài `12 bit` sẽ được cài vào **priority** của **Bridge-ID** trên các **BPDU** . **Priority** dài `16bit` nên chỉ còn `4 bit` cho **priority**, `12 bit` còn lại cho **VLAN-ID** => **Priority** với **pVST+** luôn phải là bội số của `4096` ( = `2`<sup>`12`</sup> )
 > ## **6) Cấu hình STP**
 - Bật | Tắt **STP** trên các **VLAN** :
     ```
