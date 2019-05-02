@@ -1,6 +1,6 @@
 # OSPF - Open Shortest Path First ( O )
 > ## **1) Đặc điểm**
-- Là 1 giao thức Link-state điển hình . Mỗi Router khi chạy giao thức sẽ gửi bản tin **LSA ( *Link-State Advertisement* )** của nó cho tất cả các Router trong vùng ( **area** ) . Sau 1 thời gian trao đổi , các Router sẽ đồng nhất bảng cơ sở dữ liệu **LSDB ( *Link-State Database* )** với nhau , mỗi Router đều có được "bản đồ mạng" của cả vùng . Từ đó mỗi Router sẽ chạy giải thuật ***Dijkstra*** tính toán ra 1 cây đường đi ngắn nhất ( ***Shortesr Path Tree*** ) và dựa vào cây này để xây dựng bảng định tuyến .
+- Là 1 giao thức Link-state điển hình . Mỗi Router khi chạy giao thức sẽ gửi bản tin **LSA ( *Link-State Advertisement* )** của nó cho tất cả các Router trong vùng ( **area** ) . Sau 1 thời gian trao đổi , các Router sẽ đồng nhất bảng cơ sở dữ liệu **LSDB ( *Link-State Database* )** với nhau , mỗi Router đều có được "bản đồ mạng" của cả vùng . Từ đó mỗi Router sẽ chạy giải thuật ***Dijkstra*** tính toán ra 1 cây đường đi ngắn nhất ( ***Shortest Path Tree*** ) và dựa vào cây này để xây dựng bảng định tuyến .
 - **OSPF** có **AD** = `110`
 - **Metric** = `(10^8)\bandwidth`
 - **OSPF** chạy trực tiếp trên nền IP , có **protocol-id** là `89`

@@ -71,11 +71,11 @@
 > ## **4) Truyền dữ liệu Half-duplex và Full-duplex**
 - Trên một môi trường truyền dẫn ( VD trên 1 sợi cáp đồng ), thông tin lan truyền giữa các thiết bị mạng có thể được thực hiện theo nhiều dạng thức khác nhau như : chỉ cho phép truyền 1 chiều ( quá trình t1 ) từ thiết bị mạng này tới thiết bị mạng khác trong 1 đơn vị thời gian, quá trình t2 chỉ được thực hiện khi quá trình t1 kết thúc. Dạng thức này gọi là **Half-duplex**. Trong trường hợp môi trường truyền và các thiết bị mạng có thể hoạt động song song cùng lúc để quá trình t1 và t2 xảy ra đồng thời ta có dạng thức truyền **Full-duplex**.
 
-    ![](/images/ccna/4_Giao_thuc_TCP_va_UDP/7.jpg)
-
     - **Half-duplex** : giữa 2 đường truyền dữ liệu và luồng tin, chỉ truyền theo 1 hướng tại 1 thời điểm khi 1 thiết bị hoàn thành việc truyền dẫn, nó phải chuyển môi trường truyền đến thiết bị khác. Một thiết bị có thể đóng vai trò THU và PHÁT tín hiệu nhưng tại 1 thời điểm nó chỉ có thể thực hiện 1 vai trò duy nhất.**VD**: Hoạt động của bộ tọa đàm điện thoại, mạng LAN có sử dụng các thiết bị trung tâm là thiết bị Layer 1 thì luôn sử dụng **Half-duplex**.
-
+        ![](/images/ccna/4_Giao_thuc_TCP_va_UDP/8.png)
     - **Full-duplex** : cho phép dữ liệu truyền đồng thời trên cả 2 đường, mỗi thiết kế sẽ có 1 kênh riêng. Mỗi thiết bị có thể đồng thời vừa PHÁT lại vừa THU tín hiệu. Các modem máy tính đều hoạt động theo phương thức này, mạng LAN sử dụng toàn thiết bị tập trung Layer 2 hoặc 2 máy tính kết nối trực tiếp với nhau đều có thể sử dụng.
+
+        ![](/images/ccna/4_Giao_thuc_TCP_va_UDP/7.png)
 
     - Bên cạnh đó, có thể áp dụng dạng truyền **Simple Mode**. Thông tin chỉ truyền theo 1 chiều quy định trước, một thiết bị chỉ đóng vai trò THU hoặc PHÁT cố định. Hệ thống báo cháy dùng phương thức này
 
