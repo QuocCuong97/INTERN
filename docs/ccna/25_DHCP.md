@@ -4,9 +4,9 @@
 - **DHCP** hoạt động theo dạng ***Client - Server*** . Máy chủ đóng vai trò DHCP Server được cấu hình các tham số để cấp phát IP động . Các tham số này gồm : ***tên*** , ***địa chỉ mạng*** , ***dãy địa chỉ cấp phát*** , ***default-gateway*** , ***DNS Server*** , ***thời gian người dùng được sử dụng IP ( lease-time )*** .
 > ## **2) Nguyên tắc hoạt động**
 - **B1** : **DHCP Client** gửi gói tin **DHCP DISCOVER** dạng ***Broadcast*** đến **DHCP Server**
-- **B2** : **DHCP Server** gửi lại gói tin **DHCP OFFER** dạng ***Broadcast*** cho **DHCP Client**
+- **B2** : **DHCP Server** gửi lại gói tin **DHCP OFFER** dạng ***Unicast*** cho **DHCP Client**
 - **B3** : **DHCP Client** gửi gói **DHCP REQUEST** dạng ***Broadcast*** cho **DHCP Server**
-- **B4** : **DHCP Server** gửi gói **DHCP ACK** dạng ***Broadcast*** cho **DHCP Client**
+- **B4** : **DHCP Server** gửi gói **DHCP ACK** dạng ***Unicast*** cho **DHCP Client**
 
     ![](/images/ccna/25_DHCP/Screenshot_2.png)
 > ## **3) Các gói tin phụ của DHCP**

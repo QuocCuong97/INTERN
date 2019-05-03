@@ -35,4 +35,4 @@
     - Chọn giao thức kết nối ( `SSH` ) và port ( `22` )
     - Nhấn `Open` để mở phiên kết nối
 
-    ![](/images/ccna/30_SSH/Screenshot_2.png)
+        ![](/images/ccna/30_SSH/Screenshot_2.png)

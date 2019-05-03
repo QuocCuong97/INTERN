@@ -14,7 +14,7 @@
     - *Xác thực dữ liệu ( **data authentication** )* : dữ liệu sẽ được xác thực nguồn gốc khi nhận được tại phía nhận để đảm bảo rằng dữ liệu này đến từ đúng thiết bị gửi mong muốn .
 - **IP Sec** sử dụng nhiều kỹ thuật bảo mật được chuẩn hóa :
 
-    ![](/images/ccna/35_VPN/10.jpg)
+     ![](/images/ccna/35_VPN/10.jpg)
     - *Giao thức **IP Sec*** ( **IP Protocol** ) được sử dụng có thể là **ESP** hoặc **AH** hoặc kết hợp cả 2 giao thức này .
     - *Kỹ thuật mã hóa dữ liệu* ( **encryption** ) được sử dụng có thể là **DES** , **3DES** , hay **AES** .
     - *Kỹ thuật xác thực* có thể là **MD5** hoặc **SHA** .
