@@ -5,8 +5,13 @@
     - Tốn kinh phí
     - Bị khóa 1 link theo giao thức **STP**
 
+    ![](/images/ccna/21_Etherchannel/1.png)
+
     => Giải pháp **Etherchannel** : một Switch sẽ thực hiện "bó" nhiều đường đấu nối thành 1 đường duy nhất , coi các đường này chỉ như 1 đường .
 > ## **2) Đặc điểm**
+
+![](/images/ccna/21_Etherchannel/2.png)
+
 - Mỗi cổng **Etherchannel** bó được tối đa `8` cổng vật lý cùng loại .
 - Các cổng phải được thống nhất về :
 
@@ -41,7 +46,13 @@
         - Với **LACP**
             - **Chủ động** = ***Active***
             - **Bị động** = ***Passive***
+
+            ![](/images/ccna/21_Etherchannel/3.jpg)
+
 > ## **4) Cấu hình Etherchannel**
+
+![](/images/ccna/21_Etherchannel/4.png)
+
 ### **4.1) Cấu hình tĩnh**
 - Đi vào mode cấu hình của các cổng thành phần và dùng lệnh :
     ```
