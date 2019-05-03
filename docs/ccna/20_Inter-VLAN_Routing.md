@@ -10,7 +10,7 @@
         Switch(config-if) # switchport trunk encapsulation dot1q
         Switch(config-if) # switchport mode trunk
         ```
-    - Cấu hình chia **sub-interface trên Router :
+    - Cấu hình chia `sub-interface` trên Router :
         ```
         Router(config) # interface f0/0
         Router(config-if) # no shutdown
@@ -31,7 +31,7 @@
         Router(config-if) # ip address 192.168.30.1 255.255.255.0
         Router(config-if) # exit
         ```
-    => Mỗi **Sub-interface** sẽ được đặt 1 địa chỉ là **gateway** cho các host nằm trong **VLAN** tương ứng mà nó đấu nối vào . Các host thuộc **VLAN** tương ứng sẽ trỏ `default-gateway` đến địa chỉ này để đi được đến các host thuộc VLAN khác thông qua Router .
+    => Mỗi `Sub-interface` sẽ được đặt 1 địa chỉ là **gateway** cho các host nằm trong **VLAN** tương ứng mà nó đấu nối vào . Các host thuộc **VLAN** tương ứng sẽ trỏ `default-gateway` đến địa chỉ này để đi được đến các host thuộc VLAN khác thông qua Router .
 > ## **2) Định tuyến VLAN với Switch Layer 3**
 - Các Switch Layer 3 ,  bên cạnh khả năng chuyển mạch các Frame Ethernet và cấu hình các công nghệ Layer 2 như **VLAN** , **trunking** , **STP** , còn có khả năng chạy định tuyến và chuyển mạch Layer 3 dựa vào địa chỉ IP của các gói tin .
 - Định tuyến trên Switch Layer 3 thông qua các **SVI - Switched Virtual Interface** , có tên gọi khác là **interface VLAN** .

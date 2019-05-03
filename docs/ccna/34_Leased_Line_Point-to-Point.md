@@ -70,5 +70,67 @@
 
     ![](/images/ccna/34_Leased_Line_Point-to-Point/2.png)
 
+> #### **CHAP - Challenge Handshake Authentication Protocol**
+- **CHAP** sử dụng kỹ thuật bắt tay 3 bước ( ***three-way handshake*** ) . **CHAP** được thực hiện ở lúc bắt đầu kết nối và luôn được lặp lại trong suốt quá trình kết nối được duy trì .
+- Client muốn thiết lập kết nối tới Server , Server sẽ gửi đi 1 thông điệp có tên là ***challenge*** yêu cầu Client gửi giá trị để Server xác thực . Thông điệp gửi từ Server có chứa 1 `số ngẫu nhiên` dùng làm đầu vào cho thuật toán " ***hash*** " .
+- Client nhận được thông điệp yêu cầu từ Server . Nó sẽ sử dụng thuật toán " ***hash*** " với đầu vào là `hostname` , `password` và `số ngẫu nhiên` vừa nhận được và tính toán ra 1 giá trị nào đó và gửi lại giá trị này cho Server .
+- Server sẽ kiểm tra danh sách `username` ( nếu yêu cầu cấu hình `username` ) để tìm ra `username` nào giống với `hostname` của Client . Sau khi tìm được `username` đó , nó dùng thuật toán " ***hash*** " để mã hóa `password` tương ứng và số ngẫu nhiên trong thông điệp " ***challenge*** " ban đầu mà nó gửi cho Client để tính ra 1 giá trị nào đó . Và giá trị này sẽ so sánh với giá trị do Client gửi qua , nếu giống nhau thì xác thực thành công , nếu không thì kết nối sẽ bị xóa ngay .
+- Ý tưởng khi cấu hình **CHAP** : mỗi đầu nối phải khai báo `username` và `password` . `Username` của R1 phải là `hostname` của R2 và `username` của R2 phải là `hostname` của R1 , `password` phải giống nhau .
 
+    ![](/images/ccna/34_Leased_Line_Point-to-Point/3.png)
+
+### **Cấu hình PPP**
+- Bật cấu hình **PPP** :
+    ```
+    Router(config) # interface [name]
+    Router(config-if) # encapsulation ppp
+    ```
+> #### **Cấu hình chứng thực PAP**
+- **B1 :** Tạo `username` và `password` trên Server
+    ```
+    Router(config) # username [username] password [password]
+    ```
+- **B2 :** : Enable **PPP** :
+    ```
+    Router(config-if) # encapsulation ppp
+    ```
+- **B3 :** : Cấu hình xác thực ( trên Server ) :
+    ```
+    Router(config-if) # ppp authentication pap
+    ```
+- **B4 :** : Enable PPP trên interface của Client :
+    ```
+    Router(config-if) # ppp pap sent-username [username] password [password]
+    ```
+> #### **Cấu hình chứng thực CHAP**
+![](/images/ccna/34_Leased_Line_Point-to-Point/Screenshot_1.png)
+
+<img src=/images/ccna/34_Leased_Line_Point-to-Point/Screenshot_1.png>
+
+- **TH1 :** Các Router dùng `hostname` để chứng thực :
+    ```
+    R1(config) # username R2 password cisco
+    R1(config) # interface s0/0
+    R1(config-if) # encapsulation ppp
+
+    R2(config) # username R1 password cisco
+    R2(config) # interface s0/0
+    R2(config-if) # encapsulation ppp
+    R2(config-if) # ppp authentication chap
+    ```
+- **TH2 :** : Các Router gửi `username` và `password` bất kỳ :
+    ```
+    R1(config) # interface s0/0
+    R1(config-if) # encapsulation ppp
+    R1(config-if) # ppp chap hostname abc
+    R1(config-if) # ppp chap password cisco
+
+    R2(config) # interface s0/0
+    R2(config-if) # encapsulation ppp
+    R2(config-if) # ppp authentication chap
+    ```
+- Kiểm tra cấu hình :
+    ```
+    R# debug ppp authentication
+    ```
 
