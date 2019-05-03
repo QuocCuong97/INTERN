@@ -105,7 +105,6 @@
 > #### **Cấu hình chứng thực CHAP**
 ![](/images/ccna/34_Leased_Line_Point-to-Point/Screenshot_1.png)
 
-<img src=/images/ccna/34_Leased_Line_Point-to-Point/Screenshot_1.png>
 
 - **TH1 :** Các Router dùng `hostname` để chứng thực :
     ```
