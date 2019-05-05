@@ -1,8 +1,17 @@
 # STP - Spanning Tree Protocol
 > ## **1) Các lỗi có thể xảy ra khi triển khai dự phòng Switch**
-- **Broadcast Storm**
-- **Trùng lặp Frame**
+- **Bão Broadcast ( Broadcast Storm )**
+
+    ![](/images/ccna/19_STP/Screenshot_2.png)
+
+- **Trùng lặp Frame (  **
+
+    ![](/images/ccna/19_STP/Screenshot_1.png)
+
 - **Bảng MAC không ổn định**
+
+    ![](/images/ccna/19_STP/Screenshot_3.png)
+
 > ## **2) Tiến trình STP**
 - **B1 :** Bầu chọn **Root Switch**
     - Đầu tiên , các Switch sẽ gửi các gói tin **BPDU - Bridge Protocol Data Unit** ra khỏi cổng của mình ( `2s/lần` ). **BPDU** chứa nhiều thông tin quan trọng của **STP** , trong đó 1 giá trị quan trọng được trao đổi là **Bridge-ID** . **Bridge-ID** là giá trị để định danh cho Switch trong **STP** , dài `8 byte` và được cấu tạo từ :

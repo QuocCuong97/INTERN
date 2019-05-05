@@ -1,5 +1,15 @@
 # VLAN - Virtual LAN
-> ## **1) Cấu hình VLAN**
+> ## **1) Khái niệm VLAN**
+- **VLAN (Virtual LAN)** là một hay nhiều LAN ảo được chia ra từ một Switch vật lý . Nói cách khác VLAN là chia một Switch vật lý thành nhiều Switch logic độc lập.
+
+    ![](/images/ccna/17_VLAN/1.jpg)
+
+- Lợi ích của **VLAN** :
+    - ***Tiết kiệm băng thông của hệ thống mạng***: VLAN chia mạng LAN thành nhiều đoạn (segment) nhỏ, mỗi đoạn đó là một vùng quảng bá (broadcast domain). Khi có gói tin quảng bá (broadcast), nó sẽ được truyền duy nhất trong VLAN tương ứng. Do đó việc chia VLAN giúp tiết kiệm băng thông của hệ thống mạng.
+    - ***Tăng khả năng bảo mật***: Do các thiết bị ở các VLAN khác nhau không thể truy nhập vào nhau (trừ khi ta sử dụng router nối giữa các VLAN). Như trong ví dụ trên, các máy tính trong VLAN kế toán (Accounting) chỉ có thể liên lạc được với nhau. Máy ở VLAN kế toán không thể kết nối được với máy tính ở VLAN kỹ sư (Engineering).
+    - ***Dễ dàng thêm hay bớt máy tính vào VLAN***: Việc thêm một máy tính vào VLAN rất đơn giản, chỉ cần cấu hình cổng cho máy đó vào VLAN mong muốn.
+    - ***Giúp mạng có tính linh động cao***: VLAN có thể dễ dàng di chuyển các thiết bị. Giả sử trong ví dụ trên, sau một thời gian sử dụng công ty quyết định để mỗi bộ phận ở một tầng riêng biệt. Với VLAN, ta chỉ cần cấu hình lại các cổng switch rồi đặt chúng vào các VLAN theo yêu cầu. VLAN có thể được cấu hình tĩnh hay động. Trong cấu hình tĩnh, người quản trị mạng phải cấu hình cho từng cổng của mỗi switch. Sau đó, gán cho nó vào một VLAN nào đó. Trong cấu hình động mỗi cổng của switch có thể tự cấu hình VLAN cho mình dựa vào địa chỉ MAC của thiết bị được kết nối vào.
+> ## **2) Cấu hình VLAN**
 - Tạo **VLAN** :
     ```
     Switch(config) # vlan [vlan-id]
@@ -24,7 +34,11 @@
     ```
     Switch # show vlan
     ```
-> ## **2) Trunking**
+> ## **3) Trunking**
+- Trong trường hợp số lượng **VLAN** tăng lên nhiều hơn , số lượng đường nối để đấu nối giữa các VLAN cũng sẽ tăng lên tương ứng => không hợp lý .<br>=> **Giải pháp** : sử dụng chỉ 1 đường đấu nối giữa 2 Switch mà vẫn đảm bảo thông suốt giữa các LAN . Đường đấu nối này sẽ đảm bảo lưu lượng các **VLAN** đều có thể đi qua nó để đến được **VLAN** tương ứng của Switch đầu kia . Đường đấu nối vậy được gọi là đường **trunk** .
+
+    ![](/images/ccna/17_VLAN/2.png)
+
 - Hai cổng trên 2 Switch ở đầu đường **trunk** gọi là các ***cổng*** **trunk** , ngược lại , những cổng thuộc về 1 **VLAN** nào đó , được sử dụng để kết nối đến các end-user gọi là ***cổng*** **access** .
 
 - Mấu chốt của kỹ thuật **trunking** là đánh dấu để phân biệt giữa các **frame** của **VLAN** khác nhau khi chúng đi trên đường **trunk** . Có 2 kỹ thuật chèn thêm thông tin vào Ethernet **frame** khi nó đi vào đường **trunk** để cho biết **frame** đó thuộc **VLAN** nào , đó là **IEEE 802.1Q** ( thường được gọi tắt là **dot1q** ) và **ISL** ( **Interswitch Link** ) . **Dot1q** là chuẩn quốc tế của **IEEE** , còn **ISL** là chuẩn riêng của Cisco , chỉ chạy trên các thiết bị Cisco .
@@ -42,7 +56,7 @@
     - **Native VLAN** được sử dụng để cho phép tương thích với các thiết bị cũ không có khả năng trunking .
     - Để đảm bảo đường **trunk** hoạt động đúng đắn , 2 Switch hai đầu đường **trunk** phải cấu hình thống nhất với nhau về **native VLAN** được sử dụng trên đường **trunk** nối giữa chúng .
     - Mặc định , **native VLAN** được sử dụng là **VLAN 1** .
-> ## **3) Cấu hình Trunking**
+> ## **4) Cấu hình Trunking**
 - Chọn kỹ thuật **trunking** : **dot1q** hay **ISL** :
     ```
     Switch(config-if) # switchport trunk encapsulation [dot1q|ISL]

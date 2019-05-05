@@ -14,5 +14,10 @@
 - Switch forward **frame** ra 1 cổng thích hợp dựa vào destination MAC của **frame** . Có 2 trường hợp : 
     - Nếu destination MAC của **frame**  là 1 địa chỉ ***unicast*** MAC có sẵn trong bảng MAC , Switch chỉ cần chuyển **frame** ra cổng tương ứng với MAC trong bảng MAC .
     - Nếu destination MAC của **frame** là 1 địa chỉ ***unicast*** MAC chưa có trong bảng MAC hoặc là 1 MAC ***broadcast*** , Switch sẽ thực hiện flood **frame** này ra tất cả các cổng trừ cổng nhận vào .
+- Công nghệ **Auto-MDIX** :
+    - **Auto-MDIX** là một công nghệ được phát triển bởi HP cho phép người quản trị hệ thống mạng linh hoạt trong việc sử dụng cáp thẳng (Straight-Through) hoặc cáp chéo (Cross Over) bất chấp chúng ta đang tiến hành kết nối PC với router hay switch. 
 > ## **4) Cấu hình Switch**
-- 
+- Hiển thị bảng MAC :
+    ```
+    Switch# show mac-address-table
+    ```
