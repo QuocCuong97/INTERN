@@ -4,11 +4,11 @@
 
     ![](/images/ccna/19_STP/Screenshot_2.png)
 
-- **Trùng lặp Frame (  **
+- **Trùng lặp Frame (  Duplicate Unicast Frames )**
 
     ![](/images/ccna/19_STP/Screenshot_1.png)
 
-- **Bảng MAC không ổn định**
+- **Bảng MAC không ổn định ( MAC database instability )** 
 
     ![](/images/ccna/19_STP/Screenshot_3.png)
 
