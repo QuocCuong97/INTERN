@@ -1,7 +1,7 @@
 # Unix, GNU ,Linux : Nguồn gốc và sự khác biệt
 > ## **UNIX**
 <p align="center"><img src=https://i.imgur.com/dcuNhVm.png width=50%></p>
-<center><i>Logo Unix</i></center>
+<p align="center"><i>Logo Unix</i></p>
 
 - **Unix** là một hệ điều hành vốn ra đời đã từ rất lâu, tại phòng thí nghiệm **Bell Labs** của **AT&T**. Dự án được dẫn dắt bởi **Ken Thompson** và **Dennis Ritchie** , 2 nhà khoa học máy tính nổi tiếng.
 - Công việc phát triển **Unix** chính thức được bắt đầu vào mùa hè năm 1969, và phiên bản đầu tiên của Unix được ra đời vào tháng 3 năm 1971, tiếp đó là phiên bản thứ 2 ra đời năm 1972. ( nếu bạn gõ lệnh date trên một máy Linux, hay trên MacOS ... bạn sẽ nhận được một con số gọi là Unix Timestamp. Con số này là số giây tính từ thời điểm 00:00:00 ngày 1 tháng 1 năm 1970. Còn tại sao lại là thời điểm ngày 1 tháng 1 năm 1970 thì chắc giờ bạn cũng có câu trả lời rồi nhỉ. Đó chính là thời thời điểm mà Unix đang nằm trong quá trình phát triển )
@@ -12,9 +12,9 @@
 - Mặc dù phiên bản chính thức của Unix, BSD đã dừng phát triển từ lâu, thế nhưng những di sản mà chúng để lại là rất lớn cho đến ngày hôm nay. Rất nhiều hệ điều hành, từ close source cho đến open source đựa dựa trên 2 nhánh này.
 - Phiên bản thương mại, close source nổi tiếng, thành công nhất, có lẽ chính là MacOS đình đám của Apple. MacOS cũng như các hệ điều hành khác của Apple hiện nay là iOS, watchOS, và tvOS đều được dựa trên nền tảng của BSD. Và MacOS cũng là một trong số ít các hệ điều hành được coi là Unix-like, khi có được chứng nhận Single UNIX Specification. 
 > ## **GNU**
-<center><img src=https://i.imgur.com/ZV3cMd1.png width=50%></center>
+<p align="center"><img src=https://i.imgur.com/ZV3cMd1.png width=50%></p>
 
-<center><i>Logo GNU</i></center>
+<p align="center"><i>Logo GNU</i></p>
 
 - Tháng 9 năm 1983, Richard Stallman thông báo về sự ra đời của dự án GNU (GNU là viết tắt của từ GNU's not Unix)
 - Mục tiêu của dự án GNU là tạo ra được một hệ điều hành miễn phí, giống Unix, nơi mà mọi người có quyền tự do copy, phát triển, chỉnh sửa và phân phối phần mềm, và việc tái phân phối là không bị giới hạn. (Nên nhớ, Unix và các phiên bản rẽ nhánh từ Unix ban đầu đều là close source và bị ràng buộc bản quyền)
@@ -22,8 +22,8 @@
 - Project GNU đã tạo ra được rất nhiều sản phẩm quan trọng như GNU Compiler Collection (gcc), GNU Debugger, GNU Emacs text editor (Emacs), GNU build automator (make) ... Ngoài ra còn phải kể đến giấy phép nổi tiếng được sử dụng rộng rãi nhất hiện nay: GNU General Public License (GPL)
 - GNU Project đã đạt được nhiều thành tựu lớn, tạo ra được nhiều công cụ tương tự như những gì có trên Unix. Tuy nhiên, GNU vẫn thiếu một thành phần quan trọng, mảnh ghép cuối cùng để nó trở thành một hệ điều hành hoàn chỉnh. Đó chính là Kernel, phần thực hiện công việc điều khiển, giao tiếp với các thiết bị phần cứng (CPU, RAM, Devices ...).
 > ## **Linux**
-<center><img src=https://i.imgur.com/1WYvIRm.png width=35%></center>
-<center><i>Logo Linux</i></center>
+<p align="center"><img src=https://i.imgur.com/1WYvIRm.png width=35%></p>
+<p align="center"><i>Logo Linux</i></p>
 
 - Ngày 25 tháng 8 năm 1991, một cậu sinh viên ở Phần Lan mang tên Linus Torvalds giới thiệu một sản phẩm cá nhân, sau này trở thành Linux Kernel.
 - Project của Linus nhanh chóng nhận được sự chú ý cùng với đó là những đóng góp của nhiều cá nhân, tổ chức.
