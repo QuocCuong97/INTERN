@@ -108,8 +108,9 @@
         - **Fedora Workstation**
         - **Fedora Server**
     - Trang chủ : https://getfedora.org/en/
-    - Phiên bản mới nhất : **Fedora 30**
+    - Phiên bản mới nhất : **Fedora 30** ( 30-04-2019 )
     - Giao diện Desktop :
 
         <img src=https://i.imgur.com/c9W1535.png>
+        
     >### **2.3) OpenSUSE**                 <img src=https://i.imgur.com/oPfjZYW.png align="right" width=25%> 
