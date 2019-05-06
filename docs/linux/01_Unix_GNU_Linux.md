@@ -1,6 +1,6 @@
 # Unix, GNU ,Linux : Nguồn gốc và sự khác biệt
 > ## **UNIX**
-<div style="text-align:center"><img src=https://i.imgur.com/dcuNhVm.png width=50%></div>
+<p align="center"><img src=https://i.imgur.com/dcuNhVm.png width=50%></p>
 <center><i>Logo Unix</i></center>
 
 - **Unix** là một hệ điều hành vốn ra đời đã từ rất lâu, tại phòng thí nghiệm **Bell Labs** của **AT&T**. Dự án được dẫn dắt bởi **Ken Thompson** và **Dennis Ritchie** , 2 nhà khoa học máy tính nổi tiếng.
