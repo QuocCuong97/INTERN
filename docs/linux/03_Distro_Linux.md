@@ -44,7 +44,8 @@
     - Có cách tiếp cận thoải mái đối với việc phát hành các bản cập nhật phần mềm và sẽ không tự động cài đặt các bản cập nhật quan trọng .
     - Trang chủ : https://linuxmint.com/
     - Phiên bản mới nhất : **Linux Mint 19.1** ( Tessa ) ( 19-12-2018 )
-    - Giao diện desktop :
+
+    - Giao diện Desktop :
         - ***Cinamon*** :
 
             <img src=https://i.imgur.com/CwnSNjZ.png>
@@ -73,3 +74,42 @@
 - Ít có sự thống nhất hơn so với **Debian** .
 - Sử dụng phương thức `.rpm` là đuôi tập tin cài đặt chính thức .
 - Có phương thức quản lý gói cập nhật khác nhau : trong khi **Fedora** , **RHEL** và **CentOS** trước đây sử dụng `yum` và giờ là `dnf` thì **OpenSUSE** lại sử dụng `yast` và `zypper` còn **Mandriva** lại sử dụng `urpmi` .
+    >### **2.1) Red Hat Enterprise Linux (RHEL)**                 <img src=https://i.imgur.com/2kiisMp.png align="right" width=25%>
+    - Là 1 distro Linux được phân phối bởi **RedHat** và mục tiêu hướng đến thị trường thương mại .
+    - Là 1 trong những hệ điều hành an toàn nhất hiện có , sẵn sàng đáp ứng khối lượng tính toán cường độ cao out-of-the-box .
+    - Cung cấp các bộ tùy chỉnh tối ưu hiệu suất giúp điều chỉnh và sắp xếp hành vi hệ thống tùy theo khối lượng công việc cụ thể .
+    - Được triển khai trong các cơ quan chính phủ , tài chính-ngân hàng , nơi mà bảo vệ dữ liệu là việc quan trọng nhất .
+    - Trang chủ : https://www.redhat.com/en
+    - Phiên bản mới nhất : 
+        - **RHEL Server 7.6** ( 30-10-2018 )
+        - **RHEL Server 8.0 beta** ( 14-11-2018 )
+    - Giao diện Desktop :
+
+        <img src=https://i.imgur.com/HztmLy2.png>
+
+    >### **2.2) CentOS**                 <img src=https://i.imgur.com/gCb1qnM.png align="right" width=28%>
+    - Viết tắt của **Community Enterprise Operating System** .
+    - Là 1 distro tự do dựa trên Linux kernel .
+    - Những người phát triển CentOS đã tận dụng mã nguồn của RedHat để tạo ra 1 sản phẩm hoàn toàn tương tự tuy nhiên cái giá phải trả của nó là miễn phí .
+    - CentOS thường được sử dụng trong các doanh nghiệp bởi tính ổn định và vòng đời ***End-of-life*** dài .
+    - Có nhiều version , các version ra sau đều kế thừa , khắc phục , bổ sung và tối ưu các tính năng của các phiên bản trước . Mỗi version đều có thời hạn sử dụng riêng , cụ thể như sau :
+        - **CentOS 6.x** - End-of-life `30-11-2020`
+        - **CentOS 7.x** - End-of-life `30-06-2024`
+    - Trang chủ : https://www.centos.org/
+    - Phiên bản mới nhất : **CentOS 7.6.1810** ( 03-12-2018 )
+    - Giao diện Desktop :
+
+        <img src=https://i.imgur.com/KkFQcog.jpg>
+    >### **2.3) Fedora**                 <img src=https://i.imgur.com/vc2HQUu.png align="right" width=23%> 
+    - Là 1 bản phân phối cộng đồng được đỡ đầu bởi **RedHat** .
+    - Được tạo ra nhằm kiểm thử các công nghệ cho 1 distro thương mại khác của **RedHat** nơi mà các phần mềm mã nguồn mở mới được tạo lập , phát triển và kiểm thử trong môi trường cộng đồng trước khi được đưa vào **RHEL** .
+    - Là distro cộm cán nhất của nhánh này , vì nó là bản phân phối có số lượng người dùng cao thứ 2 trong giới **Linux** sau **Ubuntu** .
+    - Chia thành 2 loại :
+        - **Fedora Workstation**
+        - **Fedora Server**
+    - Trang chủ : https://getfedora.org/en/
+    - Phiên bản mới nhất : **Fedora 30**
+    - Giao diện Desktop :
+
+        <img src=https://i.imgur.com/c9W1535.png>
+    >### **2.3) OpenSUSE**                 <img src=https://i.imgur.com/oPfjZYW.png align="right" width=25%> 
