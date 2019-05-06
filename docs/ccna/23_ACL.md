@@ -1,7 +1,11 @@
 # ACL - Access Control List
 > ## **1) Công dụng**
-- Lọc lưu lượng
-- Phân loại dữ liệu
+- **Access Control List ( ACL )** , thường được gọi tắt là **access-list** , là 1 danh sách điều khiển truy nhập .
+- **Access-list** thường được sử dụng cho 2 mục đích :
+    - Lọc lưu lượng
+    - Phân loại dữ liệu
+
+    ![](/images/ccna/23_ACL/Screenshot_1.png)
 > ## **2) Các loại Access-list**
 - **Standard ACL** : 
     - Chỉ đề cập ddeens`source IP` của gói tin , không đề cập đến các thông tin khác .
@@ -17,6 +21,8 @@
         - `2000` -> `2699`
     - Được lựa chọn dịch vụ muốn chặn
     - Đặt càng gần **NGUỒN** càng tốt
+    
+   ![](/images/ccna/23_ACL/Screenshot_1.png)  
 > ## **3) Numbered ACL và Named ACL**
 - Một **ACL** có thể định danh bởi số hiệu ( **Numbered** ) hoặc 1 chuỗi ký tự ( **Named** )
 - Nguyên tắc hoạt động và cách sử dụng hoàn toàn giống nhau

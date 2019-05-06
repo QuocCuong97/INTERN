@@ -16,6 +16,9 @@
         - Tạo / sửa / xóa **VLAN** độc lập với Switch khác
         - Không đồng bộ với cấu hình **VLAN** từ Switch khác cũng như không gửi cấu hình **VLAN** của mình cho các Switch khác
         - Forward thông tin **VLAN** đi qua nó
+
+        ![](/images/ccna/18_VTP/Screenshot_1.png)
+        
 - Số **Revision** :
     - Mỗi Switch tham gia **VTP** sẽ duy trì 1 giá trị gọi là **revision** cho cấu hình **VLAN** đang lưu giữ .
     - Ở chế độ mặc định , số **revision** trên mỗi Switch bằng `0` , cứ mỗi lần Switch thực hiện tạo , sửa , xóa **VLAN** , giá trị này lại tăng lên 1 đơn vị .

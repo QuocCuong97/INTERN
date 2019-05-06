@@ -7,6 +7,8 @@
 - Không thể cấu hình **port-security** trên các port **trunk** .
 - Không thể cấu hình **port-secutiry** trên destination port **SPAN** .
 - Không thể cấu hình **port-security** trên các **port-channel** .
+
+    ![](/images/ccna/22_Port_Security/1.jpg)
 > ## **2) Cấu hình Port Security**
 - Đưa port về mode **Access** ( bắt buộc ) :
     ```

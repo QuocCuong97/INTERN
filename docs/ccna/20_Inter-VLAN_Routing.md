@@ -1,8 +1,9 @@
 # Inter-VLAN Routing
 > ## 1) Định tuyến VLAN sử dụng Router
-- Nếu sử dụng Router thì giải phap định tuyến này gọi là ***Router on a Stick*** .
+- Nếu sử dụng Router thì giải pháp định tuyến này gọi là ***Router on a Stick*** .
 - **VD :** 
-![](/images)
+
+    ![](/images/ccna/20_Inter-VLAN_Routing/Screenshot_1.png)
 
     - Cấu hình để cổng `f0/1` của Switch là cổng **Trunk** :
         ```
@@ -36,7 +37,9 @@
 - Các Switch Layer 3 ,  bên cạnh khả năng chuyển mạch các Frame Ethernet và cấu hình các công nghệ Layer 2 như **VLAN** , **trunking** , **STP** , còn có khả năng chạy định tuyến và chuyển mạch Layer 3 dựa vào địa chỉ IP của các gói tin .
 - Định tuyến trên Switch Layer 3 thông qua các **SVI - Switched Virtual Interface** , có tên gọi khác là **interface VLAN** .
 - **VD :**
-![]()
+
+    ![](/images/ccna/20_Inter-VLAN_Routing/Screenshot_2.png)
+
     - Gateway cho các PC thuộc **VLAN** :
         - Interface VLAN10 : `192.168.10.1/24`
         - Interface VLAN20 : `192.168.20.1/24`
