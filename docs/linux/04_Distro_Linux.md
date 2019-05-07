@@ -67,7 +67,7 @@
     - Phiên bản mới nhất : **Kali Linux 2019.1a** ( 04-03-2019 )
     - Giao diện Desktop :
 
-        <img src=https://i.imgur.com/X29UsyC.png>
+        <img src=https://i.imgur.com/X29UsyCh.png>
 
 > ## **2) Nhánh Red Hat Enterprise Linux ( RHEL )**
 - Có xuất phát điểm từ **Red Hat Enterprise Linux** ( cũng là 1 distro ) .
