@@ -90,8 +90,8 @@
     >### **2.2) CentOS**                 <img src=https://i.imgur.com/gCb1qnM.png align="right" width=28%>
     - Viết tắt của **Community Enterprise Operating System** .
     - Là 1 distro tự do dựa trên Linux kernel .
-    - Những người phát triển CentOS đã tận dụng mã nguồn của RedHat để tạo ra 1 sản phẩm hoàn toàn tương tự tuy nhiên cái giá phải trả của nó là miễn phí .
-    - CentOS thường được sử dụng trong các doanh nghiệp bởi tính ổn định và vòng đời ***End-of-life*** dài .
+    - Những người phát triển **CentOS** đã tận dụng mã nguồn của RedHat để tạo ra 1 sản phẩm hoàn toàn tương tự tuy nhiên cái giá phải trả của nó là miễn phí .
+    - **CentOS** thường được sử dụng trong các doanh nghiệp bởi tính ổn định và vòng đời ***End-of-life*** dài .
     - Có nhiều version , các version ra sau đều kế thừa , khắc phục , bổ sung và tối ưu các tính năng của các phiên bản trước . Mỗi version đều có thời hạn sử dụng riêng , cụ thể như sau :
         - **CentOS 6.x** - End-of-life `30-11-2020`
         - **CentOS 7.x** - End-of-life `30-06-2024`
@@ -100,6 +100,7 @@
     - Giao diện Desktop :
 
         <img src=https://i.imgur.com/KkFQcog.jpg>
+        
     >### **2.3) Fedora**                 <img src=https://i.imgur.com/vc2HQUu.png align="right" width=23%> 
     - Là 1 bản phân phối cộng đồng được đỡ đầu bởi **RedHat** .
     - Được tạo ra nhằm kiểm thử các công nghệ cho 1 distro thương mại khác của **RedHat** nơi mà các phần mềm mã nguồn mở mới được tạo lập , phát triển và kiểm thử trong môi trường cộng đồng trước khi được đưa vào **RHEL** .
@@ -113,4 +114,54 @@
 
         <img src=https://i.imgur.com/c9W1535.png>
         
-    >### **2.3) OpenSUSE**                 <img src=https://i.imgur.com/oPfjZYW.png align="right" width=25%> 
+    >### **2.4) OpenSUSE**                 <img src=https://i.imgur.com/oPfjZYW.png align="right" width=25%> 
+    - **SUSE Linux** là 1 hệ điều hành được sử dụng khá phổ biến ở châu Âu .
+    - Đây là một trong những sản phẩm chiến lược của hãng **Novell** .
+    - Bên cạnh hệ điều hành **SUSE Linux Enterprise** được phân phối có phí, **Novell** còn hỗ trợ dự án xây dựng một sản phẩm mã nguồn mở & miễn phí, đó là hệ điều hành **OpenSUSE**. 
+    - **OpenSUSE** mặc định sử dụng giao diện **KDE** chứ không sử dụng mặc định là **GNOME** như **Fedora** và **CentOS** .
+    - Có 2 phiên bản được phát hành song song :
+        - **OpenSUSE Tumbleweed** - phiên bản phát hành luôn cập nhật .
+        - **OpenSUSE Leap** ( bản mới nhất **15.0**) - bản phân phối ổn định .
+    - Trang chủ : https://www.opensuse.org/
+    - Giao diện Desktop :
+        
+        <img src=https://i.imgur.com/Clw4OnO.jpg>
+
+> ## **3) Các Distro khác**
+
+
+>### **3.1) Arch Linux**                 <img src=https://i.imgur.com/00ucJjz.png align="right" width=25%>
+- **Arch Linux** được **Judd Vinet** phát triển vào năm `2002`. 
+- Đây là một bản phát hành ***Rolling-release***, có nghĩa là bạn chỉ cần cài đặt một lần và nó sẽ tự cập nhật lên phiên bản mới nhất.
+- Thiết kế của **Arch Linux** rất đơn giản, thay vì cài sẵn một loạt các ứng dụng trong bản phân phối, nó chỉ để các ứng dụng tối thiếu và cần thiết để hoạt động và người dùng có thể cài đặt các ứng khác họ cần.
+- Sử dụng hệ thống quản lý kho phần mềm `pac` và `aur` .
+- Trang chủ : https://www.archlinux.org/
+- Phiên bản mới nhất : Update **2019.05.02**
+- Giao diện Desktop :
+
+    <img src=https://i.imgur.com/YMDAZZO.jpg>
+
+>### **3.1) Manjaro**                 <img src=https://i.imgur.com/IhrXOYN.png align="right" width=25%>
+- Là 1 distro **Linux** được phát triển dựa trên **Arch Linux** .
+- **Manjaro** được xây dựng với tiêu chí tạo ra một hệ điều hành Linux thân thiện với người dùng - dễ cài đặt và không gây khó khăn cho người sử dụng không chuyên. 
+- Sử dụng hệ thống quản lý kho phần mềm `pac` và `aur` .
+- Trang chủ : https://manjaro.org/
+- Phiên bản mới nhất : **Manjaro 18.0** ( Illyria ) ( 12-03-2018 )
+- Các kiểu giao diện của **Manjaro** :
+    - **Manjaro GNOME** :
+
+        <img src=https://i.imgur.com/21221eK.jpg>
+
+    - **Manjaro KDE** :
+
+        <img src=https://i.imgur.com/1cfqEeN.jpg>
+
+    - **Manjaro Architect** :
+
+        <img src=https://i.imgur.com/muvfyxm.jpg>
+
+    - **Manjaro Xfce** :
+
+        <img src=https://i.imgur.com/VD7RNyG.jpg>
+
+    

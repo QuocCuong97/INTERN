@@ -27,7 +27,7 @@
 - Còn được gọi là **NAT Overload** hay **PAT - Port Address Translation**
 - **NAT Overload** cho phép **NAT** cùng lúc nhiều địa chỉ ***private*** bên trong thành 1 địa chỉ ***public*** bên ngoài .
 
-    ![](/images/ccna/24_NAT/Screenshot_4.png)
+    ![](/images/ccna/24_NAT/Screenshot_5.png)
 > ## **4) Cấu hình NAT**
 ### **4.1) Static NAT**
 - Cấu hình 1 dòng **NAT** tĩnh : 
