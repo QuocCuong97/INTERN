@@ -4,7 +4,7 @@
 - Thanh ghi là một lượng lưu trữ nhỏ mà **CPU** dùng để lưu trữ dữ liệu nào nó cần để có thể truy cập nhanh nhằm đạt được hiệu suất tính toán tối ưu . Trong đó số bit là độ rộng của thanh ghi.
 - Thanh ghi `64-bit` có thể chứa nhiều dữ liệu hơn thanh ghi `32-bit`, `32-bit` nhiều hơn thanh ghi `16-bit` và `8-bit` .
 - Không gian càng rộng trong hệ thống thanh ghi của CPU thì nó càng có thể xử lý nhiều hơn , đặc biệt là khả năng quản lý và sử dụng bộ nhớ hệ thống - **RAM** một cách hiệu quả hơn .
-<p align="center"><img src=https://i.imgur.com/cnvf6o7.png width=50%></p>
+<p align="center"><img src=https://i.imgur.com/cnvf6o7.png width=80%></p>
 
 - Trong kiến trúc máy tính , `32-bit` hay `64-bit` đề cập đến luồng dữ liệu của bộ vi xử lý ( **CPU** ) .
 - Nó có nghĩa là hệ điều hành có thể sử dụng nhiều bộ nhớ máy tính cùng một lúc . Điều này làm cho hệ thống `64-bit` nhanh hơn nhiều so với hệ thống `32-bit`.
