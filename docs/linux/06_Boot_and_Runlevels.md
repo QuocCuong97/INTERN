@@ -31,4 +31,30 @@
 - Người dùng đăng nhập và sử dụng
 
 ## **Thiết lập chế độ khởi động mặc định**
-- ***Multi-user.target*** ( **INIT 3** ) : 
+- **Multi-user.target** ( **INIT 3** ) : Chế đô dòng lệnh Command Mode ( non-graphics ) . User chỉ sử dụng các lệnh ( command ) để thao tác . Ở chế độ này Server dùng rấ ít RAM .
+- **Graphical.target** ( **INIT 5** ) : Chế độ GUI , mặc định khi install OS ở chế độ GNOME là ta đang sử dụng **Graphical.target**
+- Các lệnh thiết lập :
+    - Thiết lập **Multi-user.target** mặc định khi khởi động :
+        ```bash
+        # systemctl set-default multi-user.target
+        ```
+    - Thiết lập **Graphical.target** mặc định khi khởi động :
+        ```bash
+        # systemctl set-default graphical.target
+        ```
+    - Kiểm tra chế độ mặc định hiện tại :
+        ```bash
+        # systemctl get default
+        ```
+    - Chuyển đổi từ **graphical** -> **multi-user** :
+        ```bash
+        # systemctl isolate multi-user.target
+        hoặc
+        # init 3
+        ```
+    - Chuyển đổi từ **multi-user** -> **graphical** :
+        ```bash
+        # systemctl isolate graphical.target
+        hoặc
+        # init 5
+        ```
