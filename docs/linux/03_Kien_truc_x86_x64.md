@@ -14,7 +14,7 @@
 > ## **2) x86 và x64**
 - Thuật ngữ `x86` được đề cập đến hệ thống `32-bit` và `x64` dành cho hệ thống `64-bit`.
 - Về mặt kỹ thuật `x86` chỉ đơn giản đề cập đến một họ bộ xử lý và tập lệnh mà tất cả chúng sử dụng . Nó không thực sự nói lên bất cứ điều gì cụ thể về kích thước dữ liệu .
-- Thuật ngữ `x86` bắt đầu như một tập lệnh `16-bit` cho bộ xử lý `16-bit` (bộ xử lý `8086` và `8088`) , sau đó được mở rộng thành tập lệnh `32-bit` cho bộ xử lý `32-bit` ( `80386` và `80486` ) , và hiện đã được mở rộng thành tập lệnh `64-bit` cho bộ xử lý `64-bit` .
+- Thuật ngữ `x86` bắt đầu như một tập lệnh `16-bit` cho bộ xử lý `16-bit` ( bộ xử lý `8086` và `8088` ) , sau đó được mở rộng thành tập lệnh `32-bit` cho bộ xử lý `32-bit` ( `80386` và `80486` ) , và hiện đã được mở rộng thành tập lệnh `64-bit` cho bộ xử lý `64-bit` .
 
 <p align="center"><img src=https://i.imgur.com/Fakoz4C.jpg width=50%></p>
 <p align="center"><i>Bộ xử lý 8086</i></p>
