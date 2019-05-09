@@ -1,18 +1,18 @@
 # Network Configurations
 ## **MỤC LỤC**
-![### **1) Các file cấu hình Network**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#1-c%C3%A1c-file-c%E1%BA%A5u-h%C3%ACnh-network-1)
-![**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1) `/etc/hosts`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#11-etchosts)<br>
-![**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2) `/etc/resolv`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#12-etcresolv)<br> 
-![**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3) `/etc/sysconfig/network-scripts/ifcfg-[tên_card_mạng]`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#13-etcsysconfignetwork-scriptsifcfg-t%C3%AAn_card_m%E1%BA%A1ng)<br>
-![### **2) Các lệnh Network cơ bản**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#2-c%C3%A1c-l%E1%BB%87nh-network-c%C6%A1-b%E1%BA%A3n-1)
-![**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1) Xem địa chỉ IP**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#21-xem-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ip)<br>
-![**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2) Tắt / Bật card mạng**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#22-t%E1%BA%AFt--b%E1%BA%ADt-card-m%E1%BA%A1ng)<br>
-![**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3) Khởi động lại `network.service`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#23-kh%E1%BB%9Fi-%C4%91%E1%BB%99ng-l%E1%BA%A1i-networkservice)<br>
-![**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4) Xem thông tin gateway**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#24-xem-th%C3%B4ng-tin-gateway)<br>
-![### **3) Cấu hình IP**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#3-c%E1%BA%A5u-h%C3%ACnh-ip-1)
-![&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**3.1) Cấu hình bằng lệnh ( tạm thời )**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#31-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-l%E1%BB%87nh--t%E1%BA%A1m-th%E1%BB%9Di-) <br>
-![**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2) Cấu hình bằng file**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#32-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-file) <br>
-![**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3) Cấu hình bằng giao diện GUI**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#33-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-giao-di%E1%BB%87n-gui) <br>
+[### **1) Các file cấu hình Network**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#1-c%C3%A1c-file-c%E1%BA%A5u-h%C3%ACnh-network-1)
+[**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1) `/etc/hosts`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#11-etchosts)<br>
+[**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2) `/etc/resolv`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#12-etcresolv)<br> 
+[**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3) `/etc/sysconfig/network-scripts/ifcfg-[tên_card_mạng]`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#13-etcsysconfignetwork-scriptsifcfg-t%C3%AAn_card_m%E1%BA%A1ng)<br>
+[### **2) Các lệnh Network cơ bản**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#2-c%C3%A1c-l%E1%BB%87nh-network-c%C6%A1-b%E1%BA%A3n-1)
+[**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1) Xem địa chỉ IP**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#21-xem-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ip)<br>
+[**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2) Tắt / Bật card mạng**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#22-t%E1%BA%AFt--b%E1%BA%ADt-card-m%E1%BA%A1ng)<br>
+[**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3) Khởi động lại `network.service`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#23-kh%E1%BB%9Fi-%C4%91%E1%BB%99ng-l%E1%BA%A1i-networkservice)<br>
+[**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4) Xem thông tin gateway**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#24-xem-th%C3%B4ng-tin-gateway)<br>
+[### **3) Cấu hình IP**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#3-c%E1%BA%A5u-h%C3%ACnh-ip-1)
+[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**3.1) Cấu hình bằng lệnh ( tạm thời )**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#31-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-l%E1%BB%87nh--t%E1%BA%A1m-th%E1%BB%9Di-) <br>
+[**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2) Cấu hình bằng file**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#32-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-file) <br>
+[**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3) Cấu hình bằng giao diện GUI**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#33-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-giao-di%E1%BB%87n-gui) <br>
 
 -------
 ## **1) Các file cấu hình Network**
