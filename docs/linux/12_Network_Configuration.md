@@ -1,18 +1,18 @@
 # Network Configurations
 ## **MỤC LỤC**
 ### **1) Các file cấu hình Network**
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1) `/etc/hosts`**
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2) `/etc/resolv`** 
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3) `/etc/sysconfig/network-scripts/ifcfg-[tên_card_mạng]`**
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1) `/etc/hosts`**<br>
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2) `/etc/resolv`**<br> 
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3) `/etc/sysconfig/network-scripts/ifcfg-[tên_card_mạng]`**<br>
 ### **2) Các lệnh Network cơ bản**
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1) Xem địa chỉ IP**
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2) Tắt / Bật card mạng**
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3) Khởi động lại `network.service`**
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4) Xem thông tin gateway**
-### **3) Cấu hình IP**
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1) Cấu hình bằng lệnh ( tạm thời )**
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2) Cấu hình bằng file**
-### **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3) Cấu hình bằng giao diện GUI**
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1) Xem địa chỉ IP**<br>
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2) Tắt / Bật card mạng**<br>
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3) Khởi động lại `network.service`**<br>
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4) Xem thông tin gateway**<br>
+### **3) Cấu hình IP** 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**3.1) Cấu hình bằng lệnh ( tạm thời )** <br>
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2) Cấu hình bằng file** <br>
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3) Cấu hình bằng giao diện GUI** <br>
 -------
 ## **1) Các file cấu hình Network**
 ### **1.1) `/etc/hosts`**
