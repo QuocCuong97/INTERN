@@ -196,7 +196,7 @@
         - `-R` , `-r` : xóa toàn bộ thư mục , kể cả thư mục con
         - `-d` : xóa 1 thư mục rỗng ( = `rmdir` )
 > **Chú ý** : Lệnh `rm -rf /` sẽ xóa toàn bộ file system ( **nguy hiểm** )
-### **2.9) `du`**
+### **2.9) `du` ( disk usage )**
 - Dùng để xem dung lượng của thư mục .
     ```
     du [option] [path]
@@ -261,20 +261,20 @@
     ```
 ## **4) Các lệnh kiểm tra performance và thông tin hệ thống**
 ### **4.1) Lệnh xem thông tin CPU**
-- ### `cat /proc/cpuinfo`
+- ### **`cat /proc/cpuinfo`**
 
     <img src=https://i.imgur.com/cId2XoW.png>
 
-- ### `nproc` - hiển thị số nhân của CPU
+- ### **`nproc`** - hiển thị số nhân của CPU
 
     <img src=https://i.imgur.com/lYhtbLV.png width=45%>
 
 ### **4.2) Lệnh xem thông tin RAM**
-- ### `cat /proc/meminfo`
+- ### **`cat /proc/meminfo`**
 
     <img src=https://i.imgur.com/f9mvdQT.png width=70%>
 
-- ### `free [options]`
+- ### **`free [options]`**
     - **Options** : 
         - `-b` : hiển thị theo bytes
         - `-k` : hiển thị theo kilobytes
@@ -284,7 +284,7 @@
         - `-h` : hiển thị theo kiểu tự động<br><br>
             <img src=https://i.imgur.com/AVcYoF9.png width=100%>
 ### **4.3) Lệnh xem thông tin ổ cứng**
-- ### `df` ( disk filesystem )
+- ### **`df` ( disk free )**
     ```
     # df [options]
     ```
@@ -312,28 +312,31 @@
         # df -t |ext4|xfs|ext3 ...|
         ```
 ### **4.4) Lệnh xem phiên bản CentOS , RHEL**
-- ### `rpm` ( Red Hat Package Manager )
+- ### **`rpm` ( Red Hat Package Manager )**
     ```
     # rpm --query centos-release     ( CentOS )
     # rpm --query redhat-release     ( RedHat)
     ```
 
     <img src=https://i.imgur.com/aHsqVxS.png>
-- ### `lsb-release`  ( Linux Standard Base )
+- ### **`lsb-release`  ( Linux Standard Base )**
     ```
     # yum install -y redhat-lsb
     # lsb_release -d
     ```
-- ### `cat /etc/centos-release`
-- ### `cat /etc/redhat-release`
-- ### `cat /etc/system-release`
-- ### `cat /etc/os-release`
-- ### `hostnamectl`
+- ### **`cat /etc/centos-release`**
+- ### **`cat /etc/redhat-release`**
+- ### **`cat /etc/system-release`**
+- ### **`cat /etc/os-release`**
+- ### **`hostnamectl`**
 ### **4.5) Lệnh xem kiến trúc hệ điều hành**
-- ### `arch`
-- ### `uname -p`
+- ### **`arch`**
+- ### **`uname -p`**
+
+    <img src=https://i.imgur.com/W8TI0Ty.png width=80%>
+    
 ### **4.6) Lệnh hiển thị thông tin kernel**
-- ### `uname [options]`
+- ### **`uname [options]`**
     - **Options** :
         - `-a` : hiển thị toàn bộ thông tin
         - `-r` : hiển thị phiên bản kernel
@@ -342,13 +345,13 @@
         - `-m` : giống `-p`<br>
     => Hiển thị thông tin cần thiết : `# uname -rps`<br><br>
         <img src=https://i.imgur.com/pQr5uCF.png>
-- ### `cat /proc/version`
+- ### **`cat /proc/version`**
     - Thuật ngữ **SMP - Support Multicore-Processor** : kernel hỗ trợ multicore và multi CPU
 
         <img src=https://i.imgur.com/2CkQQbJ.png>
 
 ### **4.7) Lệnh xem thông tin model , serial , ...phần cứng**
-- ### `dmidecode -t [number]`
+- ### **`dmidecode -t [number]`**
     <details>
     <summary>Bảng mã <strong>Dmidecode</strong></summary>
     <i>
@@ -398,7 +401,7 @@
     </i>
     </details>
 ### **4.8) Lệnh xem tên server**
-- ### `hostname`
+- ### **`hostname`**
 
 
         
