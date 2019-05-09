@@ -180,6 +180,16 @@
         - `-R` , `-r` : xóa toàn bộ thư mục , kể cả thư mục con
         - `-d` : xóa 1 thư mục rỗng ( = `rmdir` )
 > **Chú ý** : Lệnh `rm -rf /` sẽ xóa toàn bộ file system ( **nguy hiểm** )
+### **2.9) `du`**
+- Dùng để xem dung lượng của thư mục .
+    ```
+    du [option] [path]
+    ```
+    - **Options** :
+        - `-s` : xuất kết quả theo summarize ( tổng dung lượng )
+        - `-h` : in kích thước mà người dùng có thể đọc
+        - `-k` : hiển thị thông tin theo kylobyte
+        - `-m` : hiển thị thông tin theo megabyte
 ## **3) Các lệnh hệ thống**
 ### **3.1) `shutdown`**
 - Tắt hệ thống hoặc khởi động lại.
@@ -238,8 +248,7 @@
         - `-m` : hiển thị theo megabytes
         - `g` : hiển thị theo gigabytes
         - `--tera` : hiển thị theo terabytes
-        - `-h` : hiển thị theo kiểu tự động
-
+        - `-h` : hiển thị theo kiểu tự động<br><br>
             <img src=https://i.imgur.com/AVcYoF9.png width=100%>
 ### **4.3) Lệnh xem thông tin ổ cứng**
 - ### `df` ( disk filesystem )
@@ -254,8 +263,7 @@
         - `-i` : hiển thị thông tin dung lượng theo inodes
         - `-T` : hiển thị loại file system ( ext4 , xfs ,...)
         - `-t` : hiển thị thông tin dựa trên loại file system
-        - `--help` : hiển thị trợ giúp lệnh `df`
-
+        - `--help` : hiển thị trợ giúp lệnh `df`<br><br>
             <img src=https://i.imgur.com/qjrF7WI.png>
 
     - Hiển thị tất cả dung lượng ổ đĩa theo định dạng dễ đọc :
@@ -280,6 +288,67 @@
     <img src=https://i.imgur.com/aHsqVxS.png>
 - ### `lsb-release`  ( Linux Standard Base )
     ```
+    # yum install -y redhat-lsb
+    # lsb_release -d
+    ```
+- ### `cat /etc/centos-release`
+- ### `cat /etc/redhat-release`
+- ### `cat /etc/system-release`
+- ### `cat /etc/os-release`
+- ### `hostnamectl`
+### **4.5) Lệnh xem kiến trúc hệ điều hành**
+- ### `arch`
+- ### `uname -p`
+### **4.6) Lệnh hiển thị thông tin kernel**
+- ### `uname [options]`
+    - **Options** :
+        - `-a` : hiển thị toàn bộ thông tin
+        - `-r` : hiển thị phiên bản kernel
+        - `-p` : hiển thị kiến trúc linux ( x86 hoặc x64 )
+        - `-s` : hiển thị tên kernel ( thường là Linux )
+        - `-m` : giống `-p`<br>
+    => Hiển thị thông tin cần thiết : `# uname -rps`<br><br>
+        <img src=https://i.imgur.com/pQr5uCF.png>
+- ### `cat /proc/version`
+    - Thuật ngữ **SMP - Support Multicore-Processor** : kernel hỗ trợ multicore và multi CPU
+
+        <img src=https://i.imgur.com/2CkQQbJ.png>
+
+### **4.7) Lệnh xem thông tin model , serial , ...phần cứng**
+- ### `dmidecode -t [number]`
+    <details>
+    <summary>Bảng mã <strong>Dmidecode</strong></summary>
+    <i>
+    0 - BIOS<br>
+    1 - System<br>
+    2 - Baseboard<br>
+    3 - Chassis<br>
+    4 - Processor<br>
+    5 - Memory Controller<br>
+    6 - Memory Module<br>
+    7 - Cache<br>
+    8 - Port Connector<br>
+    9 - System Slots<br>
+    10 - On Board Devices<br>
+    11 - OEM Strings<br>
+    12 - System Configuration Options<br>
+    13 - BIOS Language<br>
+    14 - Group Associations<br>
+    15 - System Event Log<br>
+    16 - Physical Memory Array<br>
+    17 - Memory Device<br>
+    18 - 32-bit Memory Error<br>
+    19 - Memory Array Mapped Address<br>
+    20 - Memory Device Mapped Address<br>
+    21 - Built-in Pointing Device<br>
+    22 - 
+    </i>
+    </details>
+    
+
+
+### **4.8) Lệnh xem tên server**
+- ### `hostname`
 
 
         
