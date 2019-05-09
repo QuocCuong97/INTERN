@@ -7,6 +7,15 @@
     - ***options*** - các tùy chọn , thường bắt đầu bằng `-` hoặc `--` . Nhiều tùy chọn có thể kết hợp bằng 1 kí hiệu `-` <br>**VD :** `ls -l -a` <=> `ls -la`
     - ***arguments*** - tham số lệnh
 > **Chú ý** : dòng lệnh shell có phân biệt *chữ thường* và *chữ hoa*
+
+> ## **Thủ thuật khi gõ lệnh**
+- Dùng phím "&uarr;" , "&darr;" để xem lại các lệnh vừa gõ
+- Dùng tổ hợp `Ctrl` + `C` để hủy lệnh gõ lệnh
+- Gõ `clear` để làm mới màn hình Terminal ( hoặc sử dụng tổ hợp `Ctrl` + `L` )
+- Dùng phím `Tab` để gõ nhanh tên file hoặc lệnh
+- Dùng lệnh `history` để xem lại lịch sử gõ lệnh
+- Gõ `![number]` với number là số thứ tự của câu lệnh trong mục `history` để thực hiện nhanh câu lệnh
+- Gõ `Ctrl` + `R` để tìm kiếm các lệnh đã gõ trước đó
 ## **1) Lệnh trợ giúp : `man`  ( manual )**
 - Dùng để xem hướng dẫn dùng 1 lệnh cụ thể trong Linux .
     ```
@@ -341,12 +350,29 @@
     19 - Memory Array Mapped Address<br>
     20 - Memory Device Mapped Address<br>
     21 - Built-in Pointing Device<br>
-    22 - 
+    22 - Portable Battery<br>
+    23 - System Reset<br>
+    24 - Hardware Security<br>
+    25 - System Power Control<br>
+    26 - Voltage Probe<br>
+    27 - Cooling Device<br>
+    28 - Temperature Probe<br>
+    29 - Electrical Current Probe<br>
+    30 - Out-of-band Remote Access<br>
+    31 - Boot Integrity Services<br>
+    32 - System Boot<br>
+    33 - 64-bit Memory Error<br>
+    34 - Management Device<br>
+    35 - Management Device Component<br>
+    36 - Management Device Threshold Data<br>
+    37 - Memory Channel<br>
+    38 - IPMI Device<br>
+    39 - Power Supply<br>
+    40 - Additional Information<br>
+    41 - Onboard Devices Extended Information<br>
+    42 - Management Controller Host Interface<br>
     </i>
     </details>
-    
-
-
 ### **4.8) Lệnh xem tên server**
 - ### `hostname`
 
