@@ -114,3 +114,37 @@ USERCTL=no
 - Đặt các thông số IP => ***OK***
 
     <img src=https://i.imgur.com/rbU1tFV.png>
+
+## **4) Thay đổi card mạng về dạng `eth*`**
+- **B1 :** Kiểm tra thông tin interface hiện tại :
+    ```
+    # ifconfig
+    ```
+- **B2 :** Chỉnh sửa file `/etc/sysconfig/grub`
+    ```
+    # vi /etc/sysconfig/grub
+    ```
+    Thêm vào dòng `GRUB_CMDLINE_LINUX="crashkernel=auto rhgb quiet`
+    nội dung : `net.ifnames=0 biosdevname=0`<br>
+
+    <img src=https://i.imgur.com/GiwtpPb.png>
+- **B3 :** Biên dịch lại file `grub` để apply cấu hình mới :
+    ```
+    # grub2-mkconfig -o /boot/grub2/grub.conf
+    ```
+- **B4 :** Đổi tên file cấu hình card mạng :
+    ```
+    # cd /etc/sysconfig/network-scripts/
+    # mv ifcfg-ens33 ifcfg-eth0
+    # vi ifcfg-eth0
+    DEVICE=eth0
+    NAME=eth0
+    ```
+- **B5 :** Reboot và kiểm tra kết quả :
+    ```
+    # reboot
+    # ifconfig
+    ```
+    <img src=https://i.imgur.com/XeNBbdr.png>
+
+    => Các card mạng tiếp theo được thêm vào sẽ tự động là `eth1` , `eth2` ,...
