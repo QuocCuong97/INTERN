@@ -13,6 +13,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**3.1) Cấu hình bằng lệnh ( tạm thời )** <br>
 **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2) Cấu hình bằng file** <br>
 **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3) Cấu hình bằng giao diện GUI** <br>
+
 -------
 ## **1) Các file cấu hình Network**
 ### **1.1) `/etc/hosts`**
