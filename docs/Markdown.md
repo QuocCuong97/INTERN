@@ -342,3 +342,12 @@ bullet	&#8226;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**3.1) Cấu hình bằng lệnh ( tạm thời )**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#31-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-l%E1%BB%87nh--t%E1%BA%A1m-th%E1%BB%9Di-) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**3.2) Cấu hình bằng file**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#32-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-file) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**3.3) Cấu hình bằng giao diện GUI**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#33-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-giao-di%E1%BB%87n-gui) <br>
+
+
+
+
+
+
+
+**4)** [**cat /proc/cpuinfo**] | [**nproc**] |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**cat /proc/meminfo**] | [**free**] |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**df**] |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **rpm** ] | [**lsb-release**] | [**cat /etc/centos-release**] | [**cat /etc/system-release**] | [**cat /etc/os-release**] | [**hostnamectl**] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**arch**] | [**uname -p**] |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**uname**] | [**cat /proc/version**] |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**dmidecode -t**] |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**hostname**] |
+----------
