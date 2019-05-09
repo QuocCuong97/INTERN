@@ -7,6 +7,9 @@
 ## **1) `/root`**
 - Thư mục home của user `root` .
 - Chỉ có `root` mới có quyền `write` dưới thư mục này .
+
+    <img src=https://i.imgur.com/G9jb5lU.png>
+
 ## **2) `/bin` - user binary**
 - Chứa các tập tin thực thi nhị phân .
 - Lệnh Linux phổ biến sử dụng ở chế độ ***single-user mode*** nằm ở thư mục này .
@@ -17,15 +20,30 @@
 ## **4) `/etc` - configuration files**
 - Chứa các tập tin cấu hình của hệ thống , các tập tin lệnh để khởi động các dịch vụ của hệ thống .
 - Chứa shell scripts startup và shutdown , sử dụng để chạy / ngừng các chương trình cá nhân .
+
+    <img src=https://i.imgur.com/QUtc7Jo.png>
+
 ## **5) `/dev/` - files device**
 - Chứa thông tin nhận biết cho các thiết bị của hệ thống , bao gồm các thiết bị đầu cuối , USB hoặc các thiết bị được gắn trên hệ thống .
 - Mỗi thiết bị đều có file đại diện và được đặt tên nhất định :
     - `cdrom` : đĩa CDROM / DVD
-    - `hd*` : ổ đĩa HDD
-    - `sd*` : ổ đĩa SCSI 
-    - `st*` : ổ đĩa từ
+    - `hd*` : ổ đĩa IDE , ATA
+        - `hda` : ổ cứng thứ nhất
+        - `hdb` :	ổ cứng thứ hai
+        - `hda1` : phân vùng thứ nhất của ổ cứng thứ nhất    
+    - `sd*` : ổ đĩa SCSI , SATA ( SSD , HDD ) , USB
+        - `sda` : ổ cứng thứ nhất
+        - `sdb` :	ổ cứng thứ hai
+        - `sda1` : phân vùng thứ nhất của ổ cứng thứ nhất
+    - `nvme0*` : ổ cứng SSD NVMe
+        - `nvme0n1` : ổ nvme thứ nhất
+        - `nvme0n2` : ổ nvme thứ hai
+        - `nvme0n1p1` : phân vùng thứ nhất của ổ nvme thứ nhất
     - `tty*` : cổng giao tiếp ( COM ,...)
     - `eth*`: cổng Ethernet
+
+        <img src=https://i.imgur.com/cOyuL4I.png>
+
 ## **6) `/proc` - process information**
 - Chứa các thông tin về System process .
 - Đây là hệ thống tập tin giả có chứa thông tin về các tiến trình đang chạy hoặc thông tin về tài nguyên hệ thống .
@@ -36,8 +54,9 @@
     - Hệ thống tập tin ghi **log** : `/var/log`
     - Các gói và các file dữ liệu : `/var/lib`
     - Email : `/var/mail`
-    - Print queues : `/var/spool`
+    - File đợi in : `/var/spool`
     - Lock file : `/var/lock`
+    - Data cho trang web : `/var/www`
     - Các file tạm thời khi cần reboot : `/var/tmp`
 ## **8) `/tmp` - temporary file**
 - Thư mục chứa các tập tin tạm thời được tạo bởi hệ thống và user .
@@ -68,8 +87,8 @@
 
 ## **18) `/run` -**
 
-## **19) `/sys` -**
-
+## **19) `/sys` - system files**
+- Lưu các tập tin của hệ thống .
 > ## **Đường dẫn tuyệt đối và đường dẫn tương đối**
 - ***Đường dẫn tuyệt đối*** là đường dẫn chỉ ra vị trí chính xác của file và thư mục . Đường dẫn tuyệt đối sẽ được khai báo bắt đầu bởi ký tự `/` rồi đến thư mục con ...<br>   **VD :** `#cd /etc/sysconfig`
 - ***Đường dẫn tương đối*** là đường dẫn mà vị trí của file và thư mục sẽ được tham chiếu bởi vị trí của thư mục hiện hành . Đường dẫn tương đối không được khai báo bắt đầu bởi thư mục gốc `/` <br>**VD :** `# cd network-scripts`
