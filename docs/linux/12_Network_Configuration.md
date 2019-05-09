@@ -14,7 +14,7 @@
     - `sl*` : serial line IP
     - `wl*` : wlan ( wifi )
     - `ww*` : wwan ( wireless WAN - 3G/4G )
-    - `virbr0` : bridge
+    - `virbr0` : bridge ( có sẵn )
     - `lo*` : loopback ( có sẵn )
 ## **2) Các lệnh Network cơ bản**
 ### **2.1) Xem địa chỉ IP**
@@ -24,6 +24,8 @@
 # ifconfig -a    ( đầy đủ thông tin )
 # ip a s         ( đầy đủ thông tin )
 ```
+<img src=https://i.imgur.com/Bkm0Crs.png>
+
 ### **2.2) Tắt / Bật card mạng**
 ```
 # ifup [tên_card_mạng]       : bật card mạng
