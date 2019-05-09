@@ -22,6 +22,7 @@
     - `127.0.0.1` <=> `localhost.localdomain`
     - `::1` <=> `localhost.localdomain`<br><br>
 <img src=https://i.imgur.com/4Mg2DpV.png>
+
 ### **1.2) `/etc/resolv`**
 - Cấu hình DNS
 ### **1.3) `/etc/sysconfig/network-scripts/ifcfg-[tên_card_mạng]`**
