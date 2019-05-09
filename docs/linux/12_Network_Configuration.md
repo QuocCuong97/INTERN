@@ -1,6 +1,6 @@
 # Network Configurations
 ## **MỤC LỤC**
-[**1) Các file cấu hình Network**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#1-c%C3%A1c-file-c%E1%BA%A5u-h%C3%ACnh-network-1)<br>
+[**1) Các file cấu hình Network**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#1-c%C3%A1c-file-c%E1%BA%A5u-h%C3%ACnh-network)<br>
 [**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1) `/etc/hosts`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#11-etchosts)<br>
 [**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2) `/etc/resolv`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#12-etcresolv)<br> 
 [**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3) `/etc/sysconfig/network-scripts/ifcfg-[tên_card_mạng]`**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/12_Network_Configuration.md#13-etcsysconfignetwork-scriptsifcfg-t%C3%AAn_card_m%E1%BA%A1ng)<br>
