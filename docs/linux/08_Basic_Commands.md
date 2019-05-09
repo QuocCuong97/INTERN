@@ -199,6 +199,23 @@
         - `-h` : in kích thước mà người dùng có thể đọc
         - `-k` : hiển thị thông tin theo kylobyte
         - `-m` : hiển thị thông tin theo megabyte
+### **2.10) `tree`**
+- Hỗ trợ người dùng liệt kê các file và thư mục tại 1 thư mục theo dạng hình cây rất đẹp và dễ nhìn , nó sẽ quét sâu hết tất cả các sub-folder .
+- Sau khi liệt kê hết tất cả thì chương trình `tree` sẽ trả về thông tin tổng số lượng file hoặc thư mục đã được liệt kê .
+- Mặc định lệnh `tree` không được cài đặt trên Linux . Cài đặt như sau :
+    ```
+    # yum install tree      (RHEL/CentOS)
+    # apt-get install tree  (Ubuntu/Debian)
+    ```
+- Cấu trúc lệnh :
+    ```
+    # tree [option] [path_directory]
+    ```
+    - **Options** :
+        - `-a` : liệt kê cả các file / thư mục ẩn
+        - `-L` + `[number]` : giới hạn số lượng sub-directory sẽ được liệt kê
+        - `-d` : chỉ liệt kê thư mục , không liệt kê file<br><br>
+            <img src=https://i.imgur.com/iMO8mWM.png>
 ## **3) Các lệnh hệ thống**
 ### **3.1) `shutdown`**
 - Tắt hệ thống hoặc khởi động lại.
