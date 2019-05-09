@@ -1,4 +1,11 @@
 # Các lệnh Linux cơ bản
+**1)** **man**   
+**2)** **pwd**  | **cd** | **ls** | **cp** | **mv** | **mkdir** | **touch** | **rm** | **du** | **tree** |<br>
+**3)** **shutdown** | **reboot** | **init** | **date** |
+
+----------
+
+
 - Dòng lệnh **shell** có dạng tổng quát như sau :
 <p align=center><strong><i>command &emsp;&emsp;[option]&emsp;&emsp;arguments</i></strong></p>
 
