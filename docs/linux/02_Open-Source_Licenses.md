@@ -1,4 +1,4 @@
-# Các loại giấy phép mã nguồn mở
+# Open-Source Licenses
 - Phần mềm nguồn mở ( **Open Source** ) là những phần mềm được cung cấp dưới cả dạng mã và nguồn , không chỉ là miễn phí về giá mua mà chủ yếu là miễn phí về bản quyền : người dùng có quyền sửa đổi , cải tiến , phát triển , nâng cấp theo một số nguyên tắc chung quy định trong giấy phép phần mềm nguồn mở mà không cần xin phép ai , điều mà họ không được phép làm đối với các phần mềm nguồn đóng ( tức là phần mềm thương mại ) .
 - Trong bản mô tả chi tiết của từng “license” có thông tin về “ ***Điều khoản và điều kiện sử dụng , Tái sản xuất , Phân phối*** ” . 
 > ## **1) Apache license 2.0** <img src=https://i.imgur.com/aeHvD7d.png width=40% align="right">
