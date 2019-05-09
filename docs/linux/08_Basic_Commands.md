@@ -1,7 +1,7 @@
 # Các lệnh Linux cơ bản
-**1)** **man**   
-**2)** **pwd**  | **cd** | **ls** | **cp** | **mv** | **mkdir** | **touch** | **rm** | **du** | **tree** |<br>
-**3)** **shutdown** | **reboot** | **init** | **date** |
+**1)** [**man**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#1-l%E1%BB%87nh-tr%E1%BB%A3-gi%C3%BAp--man---manual-)  
+**2)** [**pwd**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#21-pwd--print-name-of-currentworking-directory-)  | [**cd**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#22-cd--change-directory-) | [**ls**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#23-ls--list-directory-contents-) | [**cp**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#24-cp--copy-) | [**mv**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#25-mv--move-) | [**mkdir**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#26-mkdir--make-directory-) | [**touch**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#27-touch) | [**rm**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#28-rm--remove-) | [**du**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#29-du) | [**tree**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#210-tree) |<br>
+**3)** [**shutdown**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#31-shutdown) | [**reboot**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#32-reboot) | [**init**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#33-init) | [**date**](https://github.com/QuocCuong97/INTERN/blob/master/docs/linux/08_Basic_Commands.md#34-date) |
 
 ----------
 
