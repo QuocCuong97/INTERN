@@ -47,7 +47,7 @@
 - Hoạt động của **shell** : *phân tích cú pháp lệnh -> thông dịch yêu cầu của lệnh -> truyền thông điệp tới kernel -> nhận kết quả trả về từ kernel và hiển thị ra màn hình kết quả của lệnh*.
 - Bên cạnh đó , **Shell** còn có khả năng bảo vệ **Kernel** từ các yêu cầu không hợp lệ .
 - Có các loại **shell** : 
-    - ***sh ( the Bourne Shell )*** : đây là **shell** nguyên thủy của **UNIX** được viết bởi Stephen Bournevào năm `1974` . Đến nay **shell sh** vẫn được sử dụng rộng rãi . **sh** đơn giản, dung lượng nhỏ, ít tính năng nhất so với các Shell ra đời sau này . **sh** thiếu hẳn các tính năng cần thiết như:
+    - ***sh ( the Bourne Shell )*** : đây là **shell** nguyên thủy của **UNIX** được viết bởi Stephen Bourne vào năm `1974` . Đến nay **shell sh** vẫn được sử dụng rộng rãi . **sh** đơn giản, dung lượng nhỏ, ít tính năng nhất so với các Shell ra đời sau này . **sh** thiếu hẳn các tính năng cần thiết như:
         - Tự động hoàn thành tên file , câu lệnh . Tức là , bạn chỉ cần gõ vào ký tự đầu của file , tên lệnh và nhấn phím Tab thì Shell đưa ra 1 số tên file , câu lệnh bắt đầu bằng ký tự đó .
         - Lưu lại các câu lệnh đã gõ vào bộ nhớ ( `history` ) và cho phép duyệt , chỉnh sửa hoặc sử dụng lại các câu lệnh này .
     - ***bash ( Bourne-again Shell )*** : là **shell** mặc định trên **Linux** được viết bởi **Brian Fox** và **Chet Ramey** cho dự án **GNU** ( mục đích của **GNU** là phát triển 1 hệ điều hành hoàn toàn miễn phí, toàn diện, hiệu năng cao và tương thích với Unix ) . **Bash** được cải tiến từ **sh** , nó hỗ trợ nhiều câu lệnh hơn .

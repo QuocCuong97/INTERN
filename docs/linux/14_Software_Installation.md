@@ -38,7 +38,7 @@
     # rpm -e teamviewer-14.2.8352.x86_64.rpm
     ```
 ## **2) Cài đặt từ `yum`**
-- **YUM ( yellowdog updater modifier )** : cài đặt , xóa , truy vấn các phần mềm từ các **repository** trên Internet hay Local một cách tự động ( **repository** là nơi lưu trữ các phần mềm trên Internet ) .
+- **YUM ( yellowdog updater modifier )** : cài đặt , xóa , truy vấn các phần mềm từ các **repository** trên Internet hay Local một cách tự động ( **repository** ) là nơi lưu trữ các phần mềm trên Internet ) .
 - Với phương thức này , phần mềm sẽ tự động cài đặt , tự động cập nhật phần mềm .
 - `yum` phải chạy dưới quyền của user `root` .
 - Cú pháp lệnh `yum` :
