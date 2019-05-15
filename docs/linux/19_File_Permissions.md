@@ -49,21 +49,20 @@
 ### **2.2) Bằng số**
 - Trong cách biểu diễn này , mỗi quyền được gán cho 1 trị số theo bảng sau : 
 
-    | Quyền | Giá trị |
-    |-------|---------|
-    | `r` | `4` |
-    | `w` | `2` |
-    | `x` | `1` |
-
+| Quyền | Giá trị |
+|-------|---------|
+| `r` | `4` |
+| `w` | `2` |
+| `x` | `1` |
 - Mỗi nhóm quyền truy xuất là tổng của các loại quyền trên :
 
-    | Quyền | Ý nghĩa | Biểu diễn bằng số |
-    |-------|---------|-------------------|
-    | `rwx` | Có full quyền | `7` |
-    | `rw-` | Chỉ có quyền đọc và ghi | `6` |
-    | `r-x` | Chỉ có quyền đọc và thực thi | `5` |
-    | `r--` | Chỉ có quyền đọc | `4` |
-    | `---` | Không có quyền gì | `0` |
+| Quyền | Ý nghĩa | Biểu diễn bằng số |
+|-------|---------|-------------------|
+| `rwx` | Có full quyền | `7` |
+| `rw-` | Chỉ có quyền đọc và ghi | `6` |
+| `r-x` | Chỉ có quyền đọc và thực thi | `5` |
+| `r--` | Chỉ có quyền đọc | `4` |
+| `---` | Không có quyền gì | `0` |
 
 - Vì quyền thực sự gồm cả 3 nhóm quyền ( **owner , group , others** ) nên danh sách quyền biểu diễn dưới dạng số sẽ gồm `3` chữ số .
     - **VD :** 
