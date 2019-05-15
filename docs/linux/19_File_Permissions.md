@@ -123,3 +123,17 @@
 
 
 # Sticky Bit , SUID , SGID
+## **1) SUID**
+- **SUID** ( hay **Set user ID** ) , được sử dụng trên các file thực thi ( ***executable files*** ) để cho phép việc thực thi được thực hiện dưới owner của file thay vì thực hiện như user đang login trong hệ thống .
+- **SUID** cũng có thể được sử dụng để thay đổi ownership của file được tạo hoặc di chuyển nó đến 1 thư mục mà owner của nó sẽ là owner của thư mục chuyển đến thay vì là owner của nó được tạo ra .
+- **VD :** **SUID** được set trên lệnh `passwd` với chữ cái `s` :
+    
+    <img src=https://i.imgur.com/VGPHh2u.png>
+
+- Có 2 cách để thực hiện thêm **SUID** 
+    ```
+    # chmod u+s [file]
+    hoặc
+    # chmod 4750 [file]   ( thêm 4 vào đầu file permisson )
+    ```
+    > ***Chú ý :** Nếu file chưa có quyền thực thi , **SUID** sẽ là chữ `S` . Để kí tự `S` thành `s` phải cấp quyền **execute** cho nó.*<br>```# chmod u+x file1<br>```
