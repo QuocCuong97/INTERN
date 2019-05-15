@@ -133,7 +133,56 @@
 - Có 2 cách để thực hiện thêm **SUID** 
     ```
     # chmod u+s [file]
+    ```
     hoặc
-    # chmod 4750 [file]   ( thêm 4 vào đầu file permisson )
+    ```
+    # chmod [4]750 [file]   ( thêm 4 vào đầu file_permisson )
     ```
     > ***Chú ý :** Nếu file chưa có quyền thực thi , **SUID** sẽ là chữ `S` . Để kí tự `S` thành `s` phải cấp quyền **execute** cho nó.*<br>```# chmod u+x file1<br>```
+## **2) SGID**
+- **SGID** ( hay **Set group ID** ) , cũng tương tự như **SUID** , được sử dụng trên các file thực thi ( ***excutable files*** ) để cho phép việc thực thi được thực hiện dưới owner group của file thay vì thực hiện như group đang login trong hệ thống .
+- **SGID** cũng có thể được sử dụng để thay đổi ownership group của file được tạo hoặc di chuyển nó đến 1 thư mục mà owner group của nó sẽ là owner group của thư mục chuyển đến thay vì là group mà nó được tạo ra .
+- Có 2 cách thêm **SGID**
+    ```
+    # chmod g+s [file]
+    ```
+    hoặc
+    ```
+    # chmod [2]750 [file]   (thêm 2 vào đầu file_permission)
+    ```
+## **3) Sticky Bit**
+- Được dùng cho các thư mục chia sẻ , mục đích là ngăn chặn việc người dùng này xóa file của người dùng kia . Chỉ duy nhất owner file và `root` mới có quyền rename hay xóa các file , thư mục khi nó được set **sticky bit** .
+- **Sticky bit** được mô tả bằng chữ cái `t` ở cuối dòng hiển thị permission .
+- Có 2 cách thêm **Sticky Bit** cho thư mục :
+    ```
+    # chmod o+t [file]
+    ```
+    hoặc
+    ```
+    # chmod [1]750 [file]  (thêm 1 vào đầu file_permission)
+    ```
+## **4) Các lệnh hỗ trợ khác**
+- Xóa **SUID** :
+    ```
+    # chmod u-s [file]
+    ```
+- Xóa **SGID** :
+    ```
+    # chmod g-s [file]
+    ```
+- Xóa **Sticky Bit** :
+    ```
+    # chmod o-t [file]
+    ```
+- Tìm tất cả các file có **SUID** :
+    ```
+    # find / -perm +4000
+    ```
+- Tìm tất cả các file có **SGID** :
+    ```
+    # find / -perm +2000
+    ```
+- Tìm tất cả các file có **Sticky Bit** :
+    ```
+    # find / -perm +1000
+    ```
