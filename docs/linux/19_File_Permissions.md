@@ -69,6 +69,7 @@
 | `---` | Không có quyền gì | `0` |
 
 </center>
+
 - Vì quyền thực sự gồm cả 3 nhóm quyền ( **owner , group , others** ) nên danh sách quyền biểu diễn dưới dạng số sẽ gồm `3` chữ số .
     - **VD :** 
         - `rwxrw----` ( `760` ) : người sở hữu có toàn quyền , các user cùng nhóm chỉ có quyền đọc/ghi còn mọi người khác không có quyền truy xuất .
@@ -119,3 +120,6 @@
     - **Options :**
         - `-R` : áp dụng đối với thư mục làm cho lệnh `chgrp` có tác dụng trên cả các thư mục con
     - **Group_owner :** nhóm sở hữu mới của tập tin
+
+
+# Sticky Bit , SUID , SGID
