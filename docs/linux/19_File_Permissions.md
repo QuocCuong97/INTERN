@@ -66,4 +66,46 @@
         - `rwxr-xr--` ( `754` ) : người sở hữu có toàn quyền , các user cùng nhóm chỉ có quyền đọc và thực thi chương trình còn mọi người khác chỉ có quyền đọc .
         > ***Lưu ý :** Người sử dụng có quyền đọc thì có quyền sao chép tập tin và tập tin sau khi sao chép sẽ thuộc về sở hữu của người thực hiện sao chép .*
 ## **3) Các lệnh về quyền**
- 
+### **3.1) `chmod`**
+- Là lệnh thay đổi quyền truy xuất trên thư mục / tập tin
+    ```
+    # chmod [options] [mode] [file]
+    ```
+    - **Options :**
+        - `-R` : áp dụng với mọi thư mục làm cho lệnh `chmod` có hiệu lực trên cả các thư mục con
+    - **Mode :** Quyền truy xuất mới cho tập tin
+        - `u` : quyền của người sở hữu ( **owner** )
+        - `g` : quyền sở hữu của nhóm ( **group** )
+        - `o` : quyền của mọi user khác ( **others** )
+        - `+` : thêm quyền
+        - `-` : rút bớt quyền
+        - `=` : gán quyền
+        - **VD :** 
+            - `g+w` : thêm quyền ghi cho group
+            - `o-rwx` : loại bỏ tất cả các quyền của các user khác
+            - `u+x` : thêm quyền thực thi cho user
+            - `+x` : thêm quyền thực thi cho cả
+            - `a+rw` : thêm quyền đọc ghi cho tất cả
+            - `ug+r` : thêm quyền đọc cho owner và group
+            - `o=x` : chỉ cho phép mọi người thực thi
+### **3.2) `chown`**
+- Là lệnh thay đổi chủ sở hữu thư mục / tập tin ( **owner** )
+    ```
+    # chown [options] [owner] [file]
+    ```
+    - **Options :**
+        - `-R` : áp dụng đối với thư mục làm cho lệnh `chown` có tác dụng trên cả các thư mục con
+    - **Owner :** chủ sở hữu mới của tập tin
+- Có thể thay đổi đồng thời chủ sở hữu và group sở hữu file
+    ```
+    # chown [options] [owner]:[group_owner] [file]
+    ```
+    
+### **3.3) `chgrp`**
+- Là lệnh thay đổi nhóm sở hữu thư mục / tập tin
+    ```
+    # chgrp [options] [group_owner] [file]
+    ```
+    - **Options :**
+        - `-R` : áp dụng đối với thư mục làm cho lệnh `chgrp` có tác dụng trên cả các thư mục con
+    - **Group_owner :** nhóm sở hữu mới của tập tin
