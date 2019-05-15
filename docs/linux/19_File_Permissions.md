@@ -13,7 +13,8 @@
     <img src=https://i.imgur.com/9k9Pv64.png>
 
     
-    - Bảng cờ đặc tính ( ***flag*** ) :<br>
+    - Bảng cờ đặc tính ( ***flag*** ) :
+
         | Ký hiệu | Kiểu file |
         |---------|-----------|
         | `-` | Regular file |
@@ -23,6 +24,7 @@
         | `c` | Character special file |
         | `p` | Named pipe |
         | `s` | Socket |
+
     - **Nhóm 1 :** Quyền của người sở hữu ( owner hoặc user ) , ký hiệu bằng kí tự `u` : người tạo ra thư mục / file hoặc được gán quyền sở hữu .
     - **Nhóm 2 :** Quyền của nhóm ( group ) ký hiệu bằng kí tự `g` : nhóm người sử dụng được gắn quyền .
     - **Nhóm 3 :** Quyền của người dùng khác ( others ) ký hiệu bằng kí tự `o` : là những người sử dụng khác không thuộc 2 nhóm trên . 
@@ -46,12 +48,15 @@
         - `rwxr-xr--` : người sở hữu có full quyền , các user cùng nhóm chỉ có quyền đọc và thực thi chương trình còn mọi người khác chỉ có quyền đọc .
 ### **2.2) Bằng số**
 - Trong cách biểu diễn này , mỗi quyền được gán cho 1 trị số theo bảng sau : 
+
     | Quyền | Giá trị |
     |-------|---------|
     | `r` | `4` |
     | `w` | `2` |
     | `x` | `1` |
+
 - Mỗi nhóm quyền truy xuất là tổng của các loại quyền trên :
+
     | Quyền | Ý nghĩa | Biểu diễn bằng số |
     |-------|---------|-------------------|
     | `rwx` | Có full quyền | `7` |
@@ -59,6 +64,7 @@
     | `r-x` | Chỉ có quyền đọc và thực thi | `5` |
     | `r--` | Chỉ có quyền đọc | `4` |
     | `---` | Không có quyền gì | `0` |
+
 - Vì quyền thực sự gồm cả 3 nhóm quyền ( **owner , group , others** ) nên danh sách quyền biểu diễn dưới dạng số sẽ gồm `3` chữ số .
     - **VD :** 
         - `rwxrw----` ( `760` ) : người sở hữu có toàn quyền , các user cùng nhóm chỉ có quyền đọc/ghi còn mọi người khác không có quyền truy xuất .
@@ -100,7 +106,7 @@
     ```
     # chown [options] [owner]:[group_owner] [file]
     ```
-    
+
 ### **3.3) `chgrp`**
 - Là lệnh thay đổi nhóm sở hữu thư mục / tập tin
     ```
