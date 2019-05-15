@@ -58,6 +58,7 @@
 
 </center>
 - Mỗi nhóm quyền truy xuất là tổng của các loại quyền trên :
+<center>
 
 | Quyền | Ý nghĩa | Biểu diễn bằng số |
 |-------|---------|-------------------|
@@ -67,6 +68,7 @@
 | `r--` | Chỉ có quyền đọc | `4` |
 | `---` | Không có quyền gì | `0` |
 
+</center>
 - Vì quyền thực sự gồm cả 3 nhóm quyền ( **owner , group , others** ) nên danh sách quyền biểu diễn dưới dạng số sẽ gồm `3` chữ số .
     - **VD :** 
         - `rwxrw----` ( `760` ) : người sở hữu có toàn quyền , các user cùng nhóm chỉ có quyền đọc/ghi còn mọi người khác không có quyền truy xuất .
