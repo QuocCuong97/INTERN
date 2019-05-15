@@ -48,12 +48,15 @@
         - `rwxr-xr--` : người sở hữu có full quyền , các user cùng nhóm chỉ có quyền đọc và thực thi chương trình còn mọi người khác chỉ có quyền đọc .
 ### **2.2) Bằng số**
 - Trong cách biểu diễn này , mỗi quyền được gán cho 1 trị số theo bảng sau : 
+<center>
 
 | Quyền | Giá trị |
 |-------|---------|
 | `r` | `4` |
 | `w` | `2` |
 | `x` | `1` |
+
+</center>
 - Mỗi nhóm quyền truy xuất là tổng của các loại quyền trên :
 
 | Quyền | Ý nghĩa | Biểu diễn bằng số |
