@@ -30,15 +30,15 @@
     - `hd*` : ổ đĩa IDE , ATA
         - `hda` : ổ cứng thứ nhất
         - `hdb` :	ổ cứng thứ hai
-        - `hda1` : phân vùng thứ nhất của ổ cứng thứ nhất    
+            - `hdb1` : phân vùng thứ nhất của ổ cứng thứ nhất    
     - `sd*` : ổ đĩa SCSI , SATA ( SSD , HDD ) , USB
         - `sda` : ổ cứng thứ nhất
         - `sdb` :	ổ cứng thứ hai
-        - `sda1` : phân vùng thứ nhất của ổ cứng thứ nhất
+            - `sdb1` : phân vùng thứ nhất của ổ cứng thứ nhất
     - `nvme0*` : ổ cứng SSD NVMe
         - `nvme0n1` : ổ nvme thứ nhất
         - `nvme0n2` : ổ nvme thứ hai
-        - `nvme0n1p1` : phân vùng thứ nhất của ổ nvme thứ nhất
+            - `nvme0n2p1` : phân vùng thứ nhất của ổ nvme thứ nhất
     - `tty*` : cổng giao tiếp ( COM ,...)
     - `eth*`: cổng Ethernet
 
