@@ -153,6 +153,9 @@
 ## **3) Sticky Bit**
 - Được dùng cho các thư mục chia sẻ , mục đích là ngăn chặn việc người dùng này xóa file của người dùng kia . Chỉ duy nhất owner file và `root` mới có quyền rename hay xóa các file , thư mục khi nó được set **sticky bit** .
 - **Sticky bit** được mô tả bằng chữ cái `t` ở cuối dòng hiển thị permission .
+
+    <img src=https://i.imgur.com/nAvMkIw.png>
+
 - Có 2 cách thêm **Sticky Bit** cho thư mục :
     ```
     # chmod o+t [file]
@@ -176,13 +179,13 @@
     ```
 - Tìm tất cả các file có **SUID** :
     ```
-    # find / -perm +4000
+    # find / -perm -4000
     ```
 - Tìm tất cả các file có **SGID** :
     ```
-    # find / -perm +2000
+    # find / -perm -2000
     ```
 - Tìm tất cả các file có **Sticky Bit** :
     ```
-    # find / -perm +1000
+    # find / -perm -1000
     ```
