@@ -68,7 +68,7 @@
         - `-a` : mount tất cả các hệ thống tập tin được khai báo trong `fstab`
         - `o` : remount ( fs ) chỉ định việc mount tại 1 file system nào đó
 
-- **VD :** Mount 1 **USB Kingston 32GB** kết nối vào Server :
+- **VD :** Mount **USB Kingston 32GB** kết nối vào Server :
     <p align=center><img src=https://i.imgur.com/Tk31gyO.png width=30%></p>
 
     - **B1 :** Cắm USB . Thực hiện kiểm tra bằng lệnh `fdisk` xem máy đã nhận USB chưa :
