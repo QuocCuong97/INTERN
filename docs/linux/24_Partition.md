@@ -61,5 +61,15 @@
             - **Flag** : "`boot`" , "`root`" , "`swap`" , "`hidden`" , "`raid`" , "`lvm`" , "`lba`" , "`legacy-boot`" , "`palo`"
             - **State** : `on` / `off`
         - `unit [unit]` : chọn đơn vị khi hiển thị trong `parted`
-            - **Unit** : "`s`"
+            - **Unit** : "`s`" ( sectors ) , "`B`" ( Bytes ) , "`kB`" , "`MB`" , "`MiB`" , "`GB`" , "`TB`" , "`TiB`" , "`%`" ( phần trăm ổ đĩa ) , "`cyl`" ( cylinders )
+### **2.4) `mkfs`**
+- Là công cụ để format phân vùng
+- Cấu trúc lệnh :
+    ```
+    # mkfs.[type] [/dev/...]
+    ```
+    - **Type :** "`xfs`" , "`ext4`" ,...Mặc định là `ext2`
+### **2.5) `mkdir`**
+### **2.6) `mount`**
+## **VD : Tạo phân vùng 3GB**
 
