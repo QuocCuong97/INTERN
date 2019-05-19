@@ -48,4 +48,18 @@
     - **Command** :
         - `mkpart [type] [start] [end]` : tạo 1 phân vùng mới
             - **Type** : "`btrfs`" , "`ext3`" , "`ext4`" , "`fat16`" , "`fat32`" , "`hfs`" , "`linux-swap`" , "`ntfs`" , "`reiserfs`" , "`xfs`" + "`primary`" , "`logical`" , "`extended`"
+            - **Start** , **End** : mặc định là đơn vị `MB`
+        - `mklabel [label type]` : tạo nhãn cho ổ cứng
+            - **Label Type** : "`gpt`" , "`msdos`" , "`loop`" , "`sun`" , "`mac`"
+        - `name [partition_name]` : đặt tên cho phân vùng
+            - Chỉ hoạt động trên ổ cứng chuẩn GPT , MAC , PC98
+        - `print` : in ra ***partition table*** của ổ cứng
+        - `quit` : thoát khỏi `parted`
+        - `resizepart [partition][end]` : thay đổi kích cỡ partition
+        - `rm [partition]` : xóa partition
+        - `set [partition] [flag] [state]` : gắn cờ
+            - **Flag** : "`boot`" , "`root`" , "`swap`" , "`hidden`" , "`raid`" , "`lvm`" , "`lba`" , "`legacy-boot`" , "`palo`"
+            - **State** : `on` / `off`
+        - `unit [unit]` : chọn đơn vị khi hiển thị trong `parted`
+            - **Unit** : "`s`"
 
