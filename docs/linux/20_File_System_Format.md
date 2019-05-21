@@ -1,6 +1,7 @@
 # File System Format
 - **File system** là những thành phần quan trọng trong 1 hệ điều hành , được sử dụng để điều khiển cách dữ liệu được lưu trữ và truy vấn...
 - Linux là hệ điều hành có khả năng hỗ trợ nhiều loại **file system** nhất hiện nay
+## **Cơ chế Jounaling**
 ## **Các kiểu file system trên CentOS 7**
 ### **1) `xfs`**       <img src=https://i.imgur.com/vJhHWfd.jpg align=right width=30%>
 - Đây là **file system** mặc định trên CentOS 7
