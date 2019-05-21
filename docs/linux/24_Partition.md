@@ -71,5 +71,66 @@
     - **Type :** "`xfs`" , "`ext4`" ,...Mặc định là `ext2`
 ### **2.5) `mkdir`**
 ### **2.6) `mount`**
-## **VD : Tạo phân vùng 3GB**
+### **VD : Tạo phân vùng 10GB từ 1 ổ cứng mới**
+- **B1 :** Kiểm tra dung lượng ổ cứng hiện tại :
+    ```
+    # fdisk -l
+    ```
+    <img src=https://i.imgur.com/YclkWZG.png>
+- **B2 :** Tạo 1 phân vùng với `parted` :
+    ```
+    # parted /dev/sda
+    ```
+    <img src=https://i.imgur.com/dnuPdEp.png>
+- **B3 :** Tạo 1 **GPT disklabel partition table** :
+    ```
+    (parted) mklabel gpt
+    ```
+    <img src=https://i.imgur.com/qdrkaYZ.png>
+
+- **B4 :** Set đơn vị mặc định là `GB` :
+    ```
+    (parted) unit GB
+    ```
+- **B5 :** Tạo partition `10G`
+    ```
+    (parted) mkpart primary 0 10
+    ```
+    hoặc 
+    ```
+    (parted) mkpart primary 0.00GB 10.00GB
+    ```
+    <img src=https://i.imgur.com/XQ14n67.png>
+- **B6 :** Quit và Save cấu hình :
+    ```
+    (parted) quit
+    ```
+- **B7 :** Định dạng lại filesystem cho partition
+    ```
+    # mkfs.xfs /dev/sda1
+    ```
+    hoặc
+    ```
+    # mkfs.ext4 /dev/sda1
+    ```
+    <img src=https://i.imgur.com/lMQghwV.png>
+
+- **B8 :** Tạo 1 thư mục rồi mount phân vùng `sda1` vừa tạo :
+    ```
+    # mkdir /DATA
+    # mount /dev/sda1 /DATA
+    # df -h
+    ```
+    <img src=https://i.imgur.com/gGXC2jR.png>
+
+- **B9 :** Lưu mount point vào file `/etc/fstab` :
+    - **Cách 1 :** Chỉnh sửa thủ công :
+        ```
+        # vi /etc/fstab
+        ```
+    - **Cách 2 :** Dùng lệnh `echo` để update thông tin vào `fstab` :
+        ```
+        # echo dev/sda1 /DATA xfs defaults 0 0 >> /etc/fstab
+        ```
+
 
