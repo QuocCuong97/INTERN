@@ -22,7 +22,7 @@
     # sestatus
     ```
     - `enabled`
-    - `disable`
+    - `disabled`
     ```
     # getenforce
     ```
