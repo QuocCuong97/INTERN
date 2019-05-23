@@ -91,11 +91,11 @@
     <img src=https://i.imgur.com/ZnnTDBL.png>
 
 ### **4.2) Thiết lập các rule**
-- Liệt kê toàn bộ các rule của các **zones** :
+- Liệt kê toàn bộ các **rule** của các **zones** :
     ```
     # firewall-cmd --list-all-zones
     ```
-- Liệt kê toàn bộ các rule trong **default zone** và **active zone** :
+- Liệt kê toàn bộ các **rule** trong **default zone** và **active zone** :
     ```
     # firewall-cmd --list-all
     ```
@@ -105,12 +105,98 @@
     ```
     # firewall-cmd --zone=home --list-all
     ```
-- Liệt kê danh sách services/port được cho phép trong zone cụ thể:
+- Liệt kê danh sách **services/port** được cho phép trong **zone** cụ thể :
     ```
     # firewall-cmd --zone=puclic --list-services
     # firewall-cmd --zone=public --list-ports
     ```
     <img src=https://i.imgur.com/NR3vpYm.png>
 
-    
+### **4.3) Thiết lập cho services**
+- Xác định các **services** trên hệ thống :
+    ```
+    # firewall-cmd --get-services
+    ```
 
+    <img src=https://i.imgur.com/Xp6852t.png>
+    
+    - Thông tin về **services** được lưu trữ tại `/usr/lib/firewalld/services`
+- Thiết lập cho phép **services** trên **firewalld** , sử dụng `--add-service` :
+    ```
+    # firewall-cmd --zone=public --add-service=http
+    success
+    # firewall-cmd --zone=public --add-service=http --permanent
+    success
+    ```
+- Thực hiện kiểm tra xem **service** đã được cho phép chưa :
+    ```
+    # firewall-cmd --zone=public --list-services
+    ```
+- Vô hiệu hóa **services** trên **firewalld** , sử dụng `--remove-service` :
+    ```
+    # firewall-cmd --zone=public --remove-service=http
+    # firewall-cmd --zone=public --remove-service=http --permanent
+    ```
+### **4.4) Thiết lập cho port**
+- Mở **port** với tham số `--add-port` :
+    ```
+    # firewall-cmd --zone=public --add-port=9999/tcp
+    # firewall-cmd --zone=public --add-port=9999/tcp --permanent
+    ```
+- Mở 1 **dải port** :
+    ```
+    # firewall-cmd --zone=public --add-port=4990-5000/tcp
+    # firewall-cmd --zone=public --add-port=4990-5000/tcp --permanent
+    ```
+- Kiểm tra lại các **port** đã mở :
+    ```
+    # firewall-cmd --zone=public --list-ports
+    ```
+- Đóng **port** với tham số `--remove-port` :
+    ```
+    # firewall-cmd --zone=public --remove-port=9999/tcp
+    # firewall-cmd --zone=public --remove-port=9999/tcp --permanent
+    ```
+## **5) Cấu hình nâng cao**
+### **5.1) Tạo Zone riêng**
+- Mặc dù, các **zone** có sẵn là quá đủ với nhu cầu sử dụng , vẫn có thể tạo lập **zone** của riêng mình để mô tả rõ ràng hơn về các chức năng của chúng . 
+- **VD :** Có thể tạo riêng một **zone** cho webserver `publicweb` hay một **zone** cấu hình riêng cho DNS trong mạng nội bộ `privateDNS` . Cần thiết lập `permanent` khi thêm một **zone** :
+    ```
+    # firewall-cmd --permanent --new-zone=publicweb
+    success
+    # firewall-cmd --permanent --new-zone=privateDNS
+    success
+    # firewall-cmd --reload
+    success
+    ```
+    - Kiểm tra lại :
+    ```
+    # firewall-cmd --get-zones
+    ```
+    - Khi đã có **zone** thiết lập riêng , có thể cấu hình như các **zone** thông thường : thiết lập mặc định , thêm quy tắc :
+    ```
+    # firewall-cmd --zone=publicweb --add-service=ssh --permanent
+    # firewall-cmd --zone=publicweb --add-service=http --permanent
+    # firewall-cmd --zone=publicweb --add-service=https --permanent
+    ```
+### **5.2) Định nghĩa services riêng trên FirewallD**
+- Khi có một **service** mới thêm vào hệ thống , có 2 phương án :
+    - Mở **port** của **service** đó trên **FirewallD**
+    - Tự định nghĩa **service** đó trên **FirewallD** <br>( **VD :** có thể tự định nghĩa port cho `Nhanhoa Admin Port` là `9999` )
+- Tạo file định nghĩa riêng từ file chuẩn ban đầu :
+    ```
+    # cp /usr/lib/firewalld/services/ssh.xml /etc/firewalld/services/nhanhoa-admin.xml
+- Chỉnh sửa để định nghĩa **servies** trên **FirewallD** :
+    ```
+    # vi /etc/firewalld/services/nhanhoa-admin.xml
+    ```
+    <img src=https://i.imgur.com/2FGVgTt.png>
+- Lưu lại và khởi động lại **FirewallD** :
+    ```
+    # firewall-cmd --reload
+    ```
+- Kiểm tra lại danh sách các **services** :
+    ```
+    # firewall-cmd --get-services
+    ```
+    <img src=https://i.imgur.com/wHjyZmM.png>
