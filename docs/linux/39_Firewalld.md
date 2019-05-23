@@ -44,6 +44,73 @@
     # systemctl disable firewalld
     ```
 - Kiểm tra tình trạng **firewalld** :
+    - **Cách 1 :**
+        ```
+        # systemctl status firewalld
+        ```
+        <img src=https://i.imgur.com/h6jsGRV.png>
+
+    - **Cách 2 :**
+        ```
+        # firewall-cmd --state
+        ```
+        <img src=https://i.imgur.com/l30B3Zg.png>
+
+    - **Cách 3 :**
+        ```
+        # systemctl is-active firewalld
+        # systemctl is-enabled firewalld
+        ```
+        <img src=https://i.imgur.com/xCjtIJr.png>
+
+## **4) Cấu hình Firewalld**
+### **4.1) Thiết lập các Zone**
+- Liệt kê tất cả các **zone** trong hệ thống :
     ```
+    # firewall-cmd --get-zones
+    ```
+    <img src=https://i.imgur.com/ohqTmol.png>
+
+- Kiểm tra **zone** mặc định :
+    ```
+    # firewall-cmd --get-default-zone
+    ```
+    <img src=https://i.imgur.com/2qTDNMR.png>
+
+- Kiểm tra **zone active** ( được sử dụng bởi card mạng )
+    - Vì **FirewallD** chưa được thiết lập bất kỳ quy tắc nào nên **zone** mặc định cũng đồng thời là zone duy nhất được kích hoạt , điều khiển mọi luồng dữ liệu .
+    ```
+    # firewall-cmd --get-active-zones
+    ```
+    <img src=https://i.imgur.com/YGV0Eo2.png>
+
+- Thay đổi **default zone** (  vd thành `home` ) :
+    ```
+    # firewall-cmd --set-default-zone=home
+    ```
+    <img src=https://i.imgur.com/ZnnTDBL.png>
+
+### **4.2) Thiết lập các rule**
+- Liệt kê toàn bộ các rule của các **zones** :
+    ```
+    # firewall-cmd --list-all-zones
+    ```
+- Liệt kê toàn bộ các rule trong **default zone** và **active zone** :
+    ```
+    # firewall-cmd --list-all
+    ```
+    <img src=https://i.imgur.com/cgZHlHQ.png>
+
+- Liệt kê toàn bộ các quy tắc trong một **zone** cụ thể , ví dụ `home` :
+    ```
+    # firewall-cmd --zone=home --list-all
+    ```
+- Liệt kê danh sách services/port được cho phép trong zone cụ thể:
+    ```
+    # firewall-cmd --zone=puclic --list-services
+    # firewall-cmd --zone=public --list-ports
+    ```
+    <img src=https://i.imgur.com/NR3vpYm.png>
+
     
 
