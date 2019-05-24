@@ -135,7 +135,7 @@
         - `0` : Lệnh trước đó không có lỗi
 - **VD :** File `abc.txt` không tồn tại
     ```
-    # rm -f abc.txt
+    # rm abc.txt
     # echo $?
     1            -> Lệnh trước có lỗi ( xóa file không tồn tại )
     ```
