@@ -15,7 +15,7 @@
     # vi /etc/fstab
     ```
     ```
-    dev/sdb1 /data xfs defaults,uquota,gquota 0 0
+    dev/sdb2 /DATA xfs defaults,uquota,gquota 0 0
     ```
 - **B2 :** Thực hiện tạo quota :
     ```
@@ -30,15 +30,28 @@
         - `path` : hiển thị đường dẫn và mount point
         - `limit [-g|-p|-u] [bsoft=N bhard=N] [isoft=N ihard=N] [user/group/project_name]` : đặt giới hạn quota với `bsoft` , `bhard` là giới hạn theo dung lượng , `isoft` , `ihard` là giới hạn theo số file copy
         - `report -h` : hiển thị thông tin quota
-- **VD :** Thực hiện quota cho user `u1` :
+    - **VD :** Thực hiện quota cho user `u1` :
+        ```
+        # xfs_quota -x -c 'limit bsoft=3G bhard=5G u1' /DATA
+        ```
+        hoặc
+        ```
+        # xfs_quota -x /DATA
+        xfs_quota> limit bsoft=3G bhard=5G u1
+        ```
+- **B3 :** Xem thông tin quota đã tạo :
     ```
-    # xfs_quota -x -c 'limit bsoft=3G bhard=4G u1' /data
+    # xfs_quota -x -c "report -h" /DATA
     ```
-    hoặc
-    ```
-    # xfs_quota -x /data
-    xfs_quota> limit bsoft=3G bhard=4G u1
-    ```
+    <img src=https://i.imgur.com/Ow2ogz7.png>
+- **B4 :** Kiểm tra hiệu quả của **quota** :
+    - Khi dung lượng sử dụng của user vượt quá ***bsoft*** , dữ liệu sẽ được sử dụng thêm 1 khoảng ***grace period*** là `6 days` :
+
+        <img src=https://i.imgur.com/s70vqj5.png>
+
+    - Khi dung lượng sử dụng của user vượt quá ***bhard*** , quá trình ghi dữ liệu bị ngừng , xuất hiện cảnh báo "`Disk quota exceeded`"
+
+        <img src=https://i.imgur.com/OggQI4S.png>
 ### **`Ext4` File System**
 - **B1 :** Thực hiện Quota Check :
     ```

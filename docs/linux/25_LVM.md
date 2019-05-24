@@ -147,6 +147,11 @@
     # df -h => kiểm tra
     ```
     <img src=https://i.imgur.com/9OQPhz4.png>
+
+- **B8 :** Lưu cấu hình vào file `/etc/fstab`
+    ```
+    # echo /dev/vg-demo1/lv-demo1 /demo1 xfs defaults 0 0
+    ```
 ## **5) Cách thay đổi dung lượng Logical volume trên LVM**
 - **B1 :** Kiểm tra các thông tin hiện có : 
     ```
@@ -164,6 +169,74 @@
             <img src=https://i.imgur.com/2xRx0ny.png>  
 
 
-
+- **B2.1 :** Tăng kích thước dung lượng **logical volume** :
+    ```
+    # lvextend -L +5G /dev/vg-demo1/lv-demo1
+    ```
+    - `-L` : tùy chọn để thay đổi kích thước
+    - Sau khi tăng kích thước **logical volume** thì dung lượng đã được tăng nhưng file system trên **volume** này vẫn chưa thay đổi :
+        ```
+        # resize2fs /dev/vg-demo1/lv-demo1
+        ```
+- **B2.2 :** Giảm kích thước **logical volume** :
+    - Trước tiên phải unmount **logical volume** muốn giảm :
+        ```
+        # umount /dev/vg-demo1/lv-demo1
+        ```
+    - Giảm kích thước của **logical volume** :
+        ```
+        # lvreduce -L 5G /dev/vg-demo1/lv-demo1
+        ```
+    - Format lại **logical volume** :
+        ```
+        # mkfs.xfs /dev/vg-demo1/lv-demo1
+        ```
+    - Mount lại **logical volume** :
+        ```
+        # mount /dev/vg-demo1/lv-demo1 demo1
+        ```
+- **B3 :** Kiểm tra kết quả :
+    ```
+    # df -h
+    ```
+## **6) Cách thay đổi dung lượng Volume Group trên LVM**
+- Chính là việc nhóm thêm **physical volume** hay bỏ nhóm **physical volume** ra khỏi **volume group** .
+- **B1 :** Kiểm tra thông tin partition :
+    ```
+    # vgdisplay
+    ```
+    hoặc
+    ```
+    # lsblk
+    ```
+- **B2.1 :** Nhóm thêm 1 partition vào **volume group** :
+    ```
+    # vgextend /dev/vg-demo1 /dev/sdb2
+    ```
+    ( hệ thống sẽ tự động chuyển `/dev/sdb2` thành **physical volume** )
+- **B2.2 :** Cắt 1 partition ra khỏi **volume group**
+    ```
+    # vgreduce /dev/vg-demo1 /dev/sdb2
+    ```
+## **7) Cách xóa Logical Volumes , Volume Group , Physical Volume**
+### **7.1) Xóa Logical Volume**
+- **B1 :** Unmount **logical volume** :
+    ```
+    # umount /dev/vg-demo1/lv-demo1
+    ```
+- **B2 :** Xóa **logical volume** :
+    ```
+    # lvremove /dev/vg-demo1/lv-demo1
+    ```
+### **7.2) Xóa Volume Group**
+- Trước khi xóa **volume group** , phải đảm bảo xóa hết **logical volume** :
+- Xóa **volume group** bằng lệnh :
+    ```
+    # vgremove /dev/vg-demo1
+    ```
+### **7.3) Xóa Physical Volume**
+- ```
+  # pvremove /dev/sdb2
+  ```
 
 
