@@ -46,17 +46,124 @@
 ## **3) Các lệnh trong LVM**
 - **Physical Volume** :
     - `pvcreate` : tạo **physical volume**
-    - `pvdisplay` : xem **physical volume** đã tạo
+    - `pvdisplay` , `pvs` : xem **physical volume** đã tạo
     - `pvremove` : xóa **physical volume**
 - **Volume Group** :
     - `vgcreate` : tạo **volume group**
-    - `vgdisplay` : xem **volume group** đã tạo
+    - `vgdisplay` , `vgs` : xem **volume group** đã tạo
     - `vgremove` : xóa **volume group**
     - `vgextend` : tăng dung lượng của **volume group**
     - `vgreduce` : giảm dung lượng của **volume group**
 - **Logical Volume** :
     - `lvcreate` : tạo **logical volume**
-    - `lvdisplay` : xem **logical volume** đã tạo
+    - `lvdisplay` , `lvs` : xem **logical volume** đã tạo
     - `lvremove` : xóa **logical volume**
     - `lvextend` : tăng dung lượng **logical volume**
     - `lvreduce` : giảm dung lượng **logical volume**
+## **4) Các bước tạo LVM**
+- Thêm 4 ổ cứng `sdb` , `sdc` , `sdd` , `sde` vào Server
+- **B1 :** Kiểm tra các hard drive có trên hệ thống :
+    ```
+    # lsblk
+    ```
+    hoặc
+    ```
+    # fdisk -l
+    ```
+    <img src=https://i.imgur.com/fYW0gzw.png>
+
+- **B2 :** Tạo **partition** :
+    - Từ các hard disk trên hệ thống , tạo ra các partition .
+    - Dùng lệnh `fdisk` ( có thể dùng `parted` )
+        ```
+        # fdisk /dev/sdb
+        ```
+        <img src=https://i.imgur.com/7MCR1ml.png>
+
+        - `n` : tạo mới partition
+
+            <img src=https://i.imgur.com/qu3evFC.png>
+
+        - `p` : tạo partition `primary`
+        - `1` : tạo partition `primary` thứ nhất
+        - Dòng "`First sector (2048-41943039,defaul 2048)`" để **default**
+        - Dòng "`Last sector,+sector or size {K,M,G} (2048-41943039),default 41943039`"<br>=> `+10G` để tạo ra phân vùng `10GiB`
+
+            <img src=https://i.imgur.com/UOW9Rae.png>
+
+        - `t` : tùy chọn thày đổi định dạng partition
+        - `8e` : thay đổi về định dạng **LVM**
+        - `w` : lưu lại và thoát
+    - Tương tự tạo thêm partition với các hard disk khác .
+
+        <img src=https://i.imgur.com/uKTlRLr.png>
+
+- **B3 :** Tạo **physical volume** :
+    - Tạo các **physical volume** là `/dev/sdb1` , `/dev/sdc1` , `/dev/sdd1` , `/dev/sde1` :
+        ```
+        # pvcreate /dev/sdb1 /dev/sdc1 /dev/sdd1 /dev/sde1
+        ```
+        <img src=https://i.imgur.com/jdc5MCL.png>
+
+    - Kiểm tra lại bằng lệnh `pvs` hoặc `pvdisplay` :
+
+        <img src=https://i.imgur.com/fTGUtA6.png>
+- **B4 :** Tạo **volume group** :
+    - Nhóm các **physical volume** thành 1 **volume group** bằng câu lệnh
+        ```
+        # vgcreate vg-demo1 /dev/sdb1 /dev/sdc1 /dev/sdd1 /dev/sde1    ( vg-demo1 là tên volume group )
+        ```
+        <img src=https://i.imgur.com/OIWku0W.png>
+    - Kiểm tra lại bằng lệnh `vgs` hoặc `vgdisplay` :
+        
+        <img src=https://i.imgur.com/JLJlbQQ.png>
+
+- **B5 :** Tạo **logical volume** :
+    - Từ 1 **volume group** , có thể tạo ra các **logical volume** bằng lệnh :
+        ```
+        # lvcreate -L 25G -n lv-demo1 vg-demo1
+        ```
+        - Trong đó :
+            - `-L` : chỉ ra dung lượng của **logical volume**
+            - `-n` : chỉ ra tên của **logical volume**
+
+        <img src=https://i.imgur.com/rCpo27M.png>
+
+    - Có thể tạo nhiều **logical volume** từ 1 **volume group**
+    - Kiểm tra lại bằng lệnh `lvs` hoặc `lvdisplay` :
+
+        <img src=https://i.imgur.com/jPNJKpL.png>
+    
+- **B6 :** Format **logical volume**
+    ```
+    # mkfs.xfs /dev/vg-demo1/lv-demo1
+    ```
+    <img src=https://i.imgur.com/KxV0vlZ.png>
+
+- **B7 :** Mount và sử dụng :
+    ```
+    # mkdir demo1
+    # mount /dev/vg-demo1/lv-demo1 demo1
+    # df -h => kiểm tra
+    ```
+    <img src=https://i.imgur.com/9OQPhz4.png>
+## **5) Cách thay đổi dung lượng Logical volume trên LVM**
+- **B1 :** Kiểm tra các thông tin hiện có : 
+    ```
+    # pvs
+    # vgs
+    # lvs
+    ```
+    - Giả sử `lv-demo1` đã đầy và cần tăng kích thước .
+    - Để tăng kích thước , phải kiểm tra xem **volume group** còn dư dung lượng để kéo giãn **logical volume** không . **Logical volume** thuộc 1 **volume group** nhất định , nếu **volume group** đã cấp phát hết thì **logical volume** cũng không tăng dung lượng lên được .
+    - Để kiểm tra , dùng lệnh `vgdisplay`
+    - Chú ý 2 trường thông tin :
+        - "`VG Status     resizeable`"  => có thể co dãn được
+            <img src=https://i.imgur.com/SrFM4pJ.png>
+        - "`Free PE / Size    3836 /14.98 GiB`"   
+            <img src=https://i.imgur.com/2xRx0ny.png>  
+
+
+
+
+
