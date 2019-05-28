@@ -42,3 +42,67 @@
     ```
     # whois [Domain]
     ```
+
+    <img src=https://i.imgur.com/ZNm0fGx.png>
+
+    <img src=https://i.imgur.com/JzhCiBP.png>
+
+## **6) `dhclient`**
+- Giúp làm mới địa chỉ IP trên máy bằng cách giải phóng địa chỉ IP cũ và nhận một địa chỉ mới từ DHCP server .
+    ```
+    # dhclient -r   ( release )
+    # dhclient      ( renew )
+## **7) `netstat`**
+- Là một lệnh nằm trong số các tập lệnh để giám sát hệ thống trên Linux .
+- Giám sát cả chiều in và chiều out kết nối vào server , hoặc các tuyến đường route , trạng thái của card mạng .
+- Rất hữu dụng trong việc giải quyết các vấn đề về sự cố liên quan đến network như là ***lượng connect kết nối , traffic , tốc độ , trạng thái của từng port , IP…***
+- Cú pháp :
+    ```
+    # netstat [options]
+    ```
+    - **Options :**
+        - `-a` : kiểm tra tổng quát tất cả các port trên Server
+        - `-c` : kiểm tra tổng quát tất cả các port trên Server ở chế độ runtime
+        - `-at` : kiểm tra các port chạy **TCP**
+        - `-au` : kiểm tra các port chạy **UDP**
+        - `-l` : kiểm tra các port ở trạng thái `LISTENING`
+        - `-lt` : kiểm tra các port ở trạng thái `LISTENING` chạy **TCP**
+        - `-plnt` : kiểm tra các port ở trạng thái `LISTENING` đang chạy dịch vụ gì
+        - `-lu` : kiểm tra các port ở trạng thái `LISTENING` chạy **UDP**
+        - `-rn` : Hiển thị bảng định tuyến
+        - `-s` : thống kê theo các bộ giao thức **TCP** , **UDP** , **ICMP** , **IP**
+        - `-st` : thống kê theo bộ giao thức **TCP**
+        - `-su` : thống kê theo bộ giao thức **UDP**
+        - `-i` : hiển thị hoạt động của các network interface
+        - `-g` : hiển thị tình trạng IPv4 và IPv6
+- Hiển thị tên service cùng **PID** :
+    ```
+    # netstat -tp
+    ```
+    <img src=https://i.imgur.com/5XmkPqs.png>
+
+- Hiển thị hoạt động của các network interface :
+    ```
+    # netstat -i
+    ```
+    <img src=https://i.imgur.com/1mrXhd4.png>
+
+- Hiển thị thông tin bảng định tuyến :
+    ```
+    # netstat -rn
+    ```
+    <img src=https://i.imgur.com/w4aebec.png>
+
+- Hiển thị các kết nối sử dụng dịch vụ `http` :
+    ```
+    # netstat -ap | grep http
+    ```
+    <img src=https://i.imgur.com/QEb9qoo.png>
+- Hiển thị số lượng gói `SYN_REC` trên Server ( nếu có quá nhiều là server đang bị **DDOS** )
+    ```
+    # netstat -np | grep SYN_REC | wc -l
+    ```
+## **8) `tcpdump`**
+
+        
+
