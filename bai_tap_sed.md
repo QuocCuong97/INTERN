@@ -74,4 +74,27 @@
 > Thay thế dòng `# urls = ["http://127.0.0.1:8086"]` bằng dòng mới `urls = ["http://192.168.69.69:8086"]`
 - Sử dụng lệnh :
     ```
-    # sed -i 's/# urls = ["http://127.0.0.1:8086"]/urls = ["http://192.168.69.69:8086"]' filethuchanh.conf 
+    # sed -i 's/# urls = \["http:\/\/127.0.0.1\:8086"\]/urls = \["http:\/\/192.168.69.69\:8086"\]/g' filethuchanh.conf 
+    ```
+    <img src=https://i.imgur.com/v2xw8br.png>
+
+> Thay dòng `# [[inputs.net]]` bằng dòng `[[inputs.net]]`
+- Sử dụng lệnh :
+    ```
+    # sed -i 's/# \[\[inputs.net\]\]/\[\[inputs.net\]\]/g' filethuchanh.conf
+    ```
+    <img src=https://i.imgur.com/uhb7mcI.png>
+
+> Thay dòng `# username = "telegraf"` bằng dòng `username = "nguoidung@hocchudong.com"`
+- Sử dụng lệnh :
+    ```
+    # sed -i 's/# username = "telegraf"/username = "nguoidung@hocchudong.com"/g' filethuchanh.conf
+    ```
+    <img src=https://i.imgur.com/oWqtEyL.png>
+
+> Thay dòng `# password = "metricsmetricsmetricsmetrics"` bằng dòng `password = "Matkhau@ok$#`
+- Sử dụng lệnh :
+    ```
+    # sed -i 's/# password = "metricsmetricsmetricsmetrics"/password = "Matkhau@ok$#/g' filethuchanh.conf
+    ```
+    <img src=https://i.imgur.com/uRJVZM1.png>
